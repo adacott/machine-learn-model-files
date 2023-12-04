@@ -1,0 +1,638 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 lr:  \{0.0001\} num epochs:  \{100\} batch size:  \{10\}\par
+Model: \{unet(\par
+  (ups): ModuleList(\par
+    (0): ConvTranspose2d(1024, 512, kernel_size=(2, 2), stride=(2, 2))\par
+    (1): DoubleConv(\par
+      (conv): Sequential(\par
+        (0): Conv2d(1024, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (2): ReLU(inplace=True)\par
+        (3): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (4): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (5): ReLU(inplace=True)\par
+      )\par
+    )\par
+    (2): ConvTranspose2d(512, 256, kernel_size=(2, 2), stride=(2, 2))\par
+    (3): DoubleConv(\par
+      (conv): Sequential(\par
+        (0): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (2): ReLU(inplace=True)\par
+        (3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (5): ReLU(inplace=True)\par
+      )\par
+    )\par
+    (4): ConvTranspose2d(256, 128, kernel_size=(2, 2), stride=(2, 2))\par
+    (5): DoubleConv(\par
+      (conv): Sequential(\par
+        (0): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (2): ReLU(inplace=True)\par
+        (3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (5): ReLU(inplace=True)\par
+      )\par
+    )\par
+    (6): ConvTranspose2d(128, 64, kernel_size=(2, 2), stride=(2, 2))\par
+    (7): DoubleConv(\par
+      (conv): Sequential(\par
+        (0): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (2): ReLU(inplace=True)\par
+        (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (5): ReLU(inplace=True)\par
+      )\par
+    )\par
+  )\par
+  (downs): ModuleList(\par
+    (0): DoubleConv(\par
+      (conv): Sequential(\par
+        (0): Conv2d(1, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (2): ReLU(inplace=True)\par
+        (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (5): ReLU(inplace=True)\par
+      )\par
+    )\par
+    (1): DoubleConv(\par
+      (conv): Sequential(\par
+        (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (2): ReLU(inplace=True)\par
+        (3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (5): ReLU(inplace=True)\par
+      )\par
+    )\par
+    (2): DoubleConv(\par
+      (conv): Sequential(\par
+        (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (2): ReLU(inplace=True)\par
+        (3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (5): ReLU(inplace=True)\par
+      )\par
+    )\par
+    (3): DoubleConv(\par
+      (conv): Sequential(\par
+        (0): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (2): ReLU(inplace=True)\par
+        (3): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+        (4): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+        (5): ReLU(inplace=True)\par
+      )\par
+    )\par
+  )\par
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\par
+  (bottleneck): DoubleConv(\par
+    (conv): Sequential(\par
+      (0): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+      (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+      (2): ReLU(inplace=True)\par
+      (3): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\par
+      (4): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\par
+      (5): ReLU(inplace=True)\par
+    )\par
+  )\par
+  (final_conv): Conv2d(64, 1, kernel_size=(1, 1), stride=(1, 1))\par
+)\}\par
+Train_Epoch:1/100|iter:126| bce_loss: 0.2617 | dice_loss: 0.9940 | total_loss: 0.6279: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [02:26<00:00,  1.16s/it]\par
+Train_Epoch:1/100|train_bce_loss: 0.3490|train_dice_loss: 0.9920|train_total_loss: 0.6705|train_f1: 0.0000|train_asd: 27.2155|train_hd95: 214.9330\par
+Val_Epoch:1/100|iter:7| bce_loss: 0.2622 | dice_loss: 0.9934 | total_loss: 0.6278:  22%|\f1\u9608?\u9608?\u9615?\f0        | 7/32 [00:04<00:15,  1.61it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:11| bce_loss: 0.2693 | dice_loss: 0.9791 | total_loss: 0.6242:  34%|\f1\u9608?\u9608?\u9608?\u9613?\f0       | 11/32 [00:07<00:13,  1.53it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:12| bce_loss: 0.2599 | dice_loss: 0.9932 | total_loss: 0.6265:  38%|\f1\u9608?\u9608?\u9608?\u9610?\f0       | 12/32 [00:07<00:11,  1.73it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:13| bce_loss: 0.2614 | dice_loss: 0.9915 | total_loss: 0.6264:  41%|\f1\u9608?\u9608?\u9608?\u9608?\f0       | 13/32 [00:08<00:10,  1.90it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:14| bce_loss: 0.2580 | dice_loss: 0.9963 | total_loss: 0.6271:  44%|\f1\u9608?\u9608?\u9608?\u9608?\u9613?\f0      | 14/32 [00:08<00:09,  1.98it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:19| bce_loss: 0.2678 | dice_loss: 0.9739 | total_loss: 0.6208:  59%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9609?\f0     | 19/32 [00:12<00:08,  1.62it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:20| bce_loss: 0.2751 | dice_loss: 0.9702 | total_loss: 0.6227:  62%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9614?\f0    | 20/32 [00:12<00:06,  1.80it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:21| bce_loss: 0.2693 | dice_loss: 0.9816 | total_loss: 0.6255:  66%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9612?\f0    | 21/32 [00:13<00:05,  1.95it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:22| bce_loss: 0.2627 | dice_loss: 0.9833 | total_loss: 0.6230:  69%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9609?\f0    | 22/32 [00:13<00:04,  2.01it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:23| bce_loss: 0.2702 | dice_loss: 0.9785 | total_loss: 0.6244:  72%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9615?\f0   | 23/32 [00:14<00:04,  2.12it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:24| bce_loss: 0.2659 | dice_loss: 0.9836 | total_loss: 0.6247:  75%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9612?\f0   | 24/32 [00:14<00:03,  2.12it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:25| bce_loss: 0.2613 | dice_loss: 0.9946 | total_loss: 0.6280:  78%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9610?\f0   | 25/32 [00:14<00:03,  2.23it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:26| bce_loss: 0.2582 | dice_loss: 0.9972 | total_loss: 0.6277:  81%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9615?\f0  | 26/32 [00:15<00:02,  2.31it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:28| bce_loss: 0.2631 | dice_loss: 0.9852 | total_loss: 0.6241:  88%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9610?\f0  | 28/32 [00:16<00:02,  1.95it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:30| bce_loss: 0.2550 | dice_loss: 0.9981 | total_loss: 0.6265:  94%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9613?\f0 | 30/32 [00:17<00:01,  1.93it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:1/100|iter:32| bce_loss: 0.2558 | dice_loss: 0.9970 | total_loss: 0.6264: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.71it/s]\par
+Val_Epoch:1/100|val_bce_loss: 0.2655|val_dice_loss: 0.9889| val_total_loss: 0.6272|val_f1: 0.0000|val_asd: 84.0360|val_hd95: 102.7862\par
+Best val loss: 0.6272 is saved!\par
+Best train loss: 0.6705 is saved!\par
+Train_Epoch:2/100|iter:117| bce_loss: 0.2019 | dice_loss: 0.9906 | total_loss: 0.5963:  93%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9614?\f0 | 117/126 [01:55<00:08,  1.12it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:2/100|iter:126| bce_loss: 0.1997 | dice_loss: 0.9922 | total_loss: 0.5959: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [02:04<00:00,  1.01it/s]\par
+Train_Epoch:2/100|train_bce_loss: 0.2265|train_dice_loss: 0.9918|train_total_loss: 0.6092|train_f1: 0.0000|train_asd: 29.6411|train_hd95: 195.0159\par
+Val_Epoch:2/100|iter:19| bce_loss: 0.2024 | dice_loss: 0.9703 | total_loss: 0.5864:  59%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9609?\f0     | 19/32 [00:11<00:06,  2.11it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:2/100|iter:20| bce_loss: 0.2096 | dice_loss: 0.9654 | total_loss: 0.5875:  62%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9614?\f0    | 20/32 [00:11<00:04,  2.43it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:2/100|iter:25| bce_loss: 0.1936 | dice_loss: 0.9940 | total_loss: 0.5938:  78%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9610?\f0   | 25/32 [00:13<00:03,  2.29it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:2/100|iter:32| bce_loss: 0.1937 | dice_loss: 0.9973 | total_loss: 0.5955: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.85it/s]\par
+Val_Epoch:2/100|val_bce_loss: 0.1980|val_dice_loss: 0.9874| val_total_loss: 0.5927|val_f1: 0.0000|val_asd: 83.9337|val_hd95: 101.8204\par
+Best val loss: 0.5927 is saved!\par
+Best train loss: 0.6092 is saved!\par
+Train_Epoch:3/100|iter:7| bce_loss: 0.1939 | dice_loss: 0.9945 | total_loss: 0.5942:   6%|\f1\u9612?\f0          | 7/126 [00:06<01:43,  1.15it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:3/100|iter:16| bce_loss: 0.1953 | dice_loss: 0.9873 | total_loss: 0.5913:  13%|\f1\u9608?\u9614?\f0         | 16/126 [00:15<01:41,  1.09it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:3/100|iter:36| bce_loss: 0.1846 | dice_loss: 0.9933 | total_loss: 0.5890:  29%|\f1\u9608?\u9608?\u9610?\f0        | 36/126 [00:35<01:19,  1.13it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:3/100|iter:37| bce_loss: 0.1876 | dice_loss: 0.9899 | total_loss: 0.5887:  29%|\f1\u9608?\u9608?\u9609?\f0        | 37/126 [00:36<01:16,  1.16it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:3/100|iter:51| bce_loss: 0.1790 | dice_loss: 0.9912 | total_loss: 0.5851:  40%|\f1\u9608?\u9608?\u9608?\u9608?\f0       | 51/126 [00:50<01:09,  1.07it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:3/100|iter:77| bce_loss: 0.1710 | dice_loss: 0.9878 | total_loss: 0.5794:  61%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0     | 77/126 [01:16<00:48,  1.01it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:3/100|iter:107| bce_loss: 0.1627 | dice_loss: 0.9914 | total_loss: 0.5770:  85%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9613?\f0  | 107/126 [01:48<00:17,  1.07it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:3/100|iter:122| bce_loss: 0.1645 | dice_loss: 0.9851 | total_loss: 0.5748:  97%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9611?\f0 | 122/126 [02:03<00:03,  1.12it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:3/100|iter:125| bce_loss: 0.1564 | dice_loss: 0.9912 | total_loss: 0.5738:  99%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9609?\f0 | 125/126 [02:05<00:00,  1.16it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:3/100|iter:126| bce_loss: 0.1561 | dice_loss: 0.9951 | total_loss: 0.5756: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [02:06<00:00,  1.00s/it]\par
+pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:3/100|train_bce_loss: 0.1771|train_dice_loss: 0.9894|train_total_loss: 0.5832|train_f1: 0.0000|train_asd: 0.0000|train_hd95: 0.0000\par
+Val_Epoch:3/100|iter:14| bce_loss: 0.1573 | dice_loss: 0.9954 | total_loss: 0.5764:  44%|\f1\u9608?\u9608?\u9608?\u9608?\u9613?\f0      | 14/32 [00:09<00:11,  1.63it/s]pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:3/100|iter:32| bce_loss: 0.1598 | dice_loss: 0.9969 | total_loss: 0.5783: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:21<00:00,  1.47it/s]\par
+Val_Epoch:3/100|val_bce_loss: 0.1638|val_dice_loss: 0.9820| val_total_loss: 0.5729|val_f1: 0.0000|val_asd: 84.7724|val_hd95: 105.1724\par
+Best val loss: 0.5729 is saved!\par
+Best train loss: 0.5832 is saved!\par
+Train_Epoch:4/100|iter:55| bce_loss: 0.1448 | dice_loss: 0.9898 | total_loss: 0.5673:  44%|\f1\u9608?\u9608?\u9608?\u9608?\u9614?\f0      | 55/126 [00:51<00:58,  1.22it/s]pred_mask is empty\par
+pred_mask is empty\par
+Train_Epoch:4/100|iter:126| bce_loss: 0.1343 | dice_loss: 0.9778 | total_loss: 0.5560: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:4/100|train_bce_loss: 0.1431|train_dice_loss: 0.9845|train_total_loss: 0.5638|train_f1: 0.0995|train_asd: 14.5560|train_hd95: 36.4842\par
+Val_Epoch:4/100|iter:32| bce_loss: 0.1319 | dice_loss: 0.9923 | total_loss: 0.5621: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.80it/s]\par
+Val_Epoch:4/100|val_bce_loss: 0.1509|val_dice_loss: 0.9583| val_total_loss: 0.5546|val_f1: 0.1495|val_asd: 36.9767|val_hd95: 68.9068\par
+Best val loss: 0.5546 is saved!\par
+Best train loss: 0.5638 is saved!\par
+Train_Epoch:5/100|iter:126| bce_loss: 0.1094 | dice_loss: 0.9579 | total_loss: 0.5337: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:5/100|train_bce_loss: 0.1175|train_dice_loss: 0.9745|train_total_loss: 0.5460|train_f1: 0.4680|train_asd: 14.2265|train_hd95: 49.1909\par
+Val_Epoch:5/100|iter:32| bce_loss: 0.0882 | dice_loss: 0.9947 | total_loss: 0.5414: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.77it/s]\par
+Val_Epoch:5/100|val_bce_loss: 0.0933|val_dice_loss: 0.9392| val_total_loss: 0.5163|val_f1: 0.0693|val_asd: 77.8391|val_hd95: 87.3728\par
+Best val loss: 0.5163 is saved!\par
+Best train loss: 0.5460 is saved!\par
+Train_Epoch:6/100|iter:126| bce_loss: 0.0873 | dice_loss: 0.9376 | total_loss: 0.5124: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:6/100|train_bce_loss: 0.0968|train_dice_loss: 0.9613|train_total_loss: 0.5291|train_f1: 0.5092|train_asd: 4.4108|train_hd95: 22.2261\par
+Val_Epoch:6/100|iter:32| bce_loss: 0.0667 | dice_loss: 0.9976 | total_loss: 0.5321: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.74it/s]\par
+pred_mask is empty\par
+pred_mask is empty\par
+Val_Epoch:6/100|val_bce_loss: 0.0699|val_dice_loss: 0.9320| val_total_loss: 0.5010|val_f1: 0.0000|val_asd: 0.0000|val_hd95: 0.0000\par
+Best val loss: 0.5010 is saved!\par
+Best train loss: 0.5291 is saved!\par
+Train_Epoch:7/100|iter:126| bce_loss: 0.0834 | dice_loss: 0.9345 | total_loss: 0.5090: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:7/100|train_bce_loss: 0.0796|train_dice_loss: 0.9454|train_total_loss: 0.5125|train_f1: 0.3200|train_asd: 8.2540|train_hd95: 27.7489\par
+Val_Epoch:7/100|iter:32| bce_loss: 0.0611 | dice_loss: 0.9807 | total_loss: 0.5209: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.81it/s]\par
+Val_Epoch:7/100|val_bce_loss: 0.0818|val_dice_loss: 0.9083| val_total_loss: 0.4950|val_f1: 0.3884|val_asd: 26.7977|val_hd95: 84.7526\par
+Best val loss: 0.4950 is saved!\par
+Best train loss: 0.5125 is saved!\par
+Train_Epoch:8/100|iter:126| bce_loss: 0.0603 | dice_loss: 0.9226 | total_loss: 0.4914: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:59<00:00,  1.05it/s]\par
+Train_Epoch:8/100|train_bce_loss: 0.0665|train_dice_loss: 0.9285|train_total_loss: 0.4975|train_f1: 0.5529|train_asd: 2.3024|train_hd95: 73.7675\par
+Val_Epoch:8/100|iter:32| bce_loss: 0.0354 | dice_loss: 0.9812 | total_loss: 0.5083: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:8/100|val_bce_loss: 0.0444|val_dice_loss: 0.8591| val_total_loss: 0.4518|val_f1: 0.3953|val_asd: 0.0345|val_hd95: 15.4143\par
+Best val loss: 0.4518 is saved!\par
+Best train loss: 0.4975 is saved!\par
+Train_Epoch:9/100|iter:126| bce_loss: 0.0614 | dice_loss: 0.9024 | total_loss: 0.4819: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:9/100|train_bce_loss: 0.0569|train_dice_loss: 0.9045|train_total_loss: 0.4807|train_f1: 0.2263|train_asd: 21.5169|train_hd95: 55.5518\par
+Val_Epoch:9/100|iter:32| bce_loss: 0.0232 | dice_loss: 0.9853 | total_loss: 0.5042: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.72it/s]\par
+Val_Epoch:9/100|val_bce_loss: 0.0307|val_dice_loss: 0.8219| val_total_loss: 0.4263|val_f1: 0.1530|val_asd: 0.0000|val_hd95: 20.4510\par
+Best val loss: 0.4263 is saved!\par
+Best train loss: 0.4807 is saved!\par
+Train_Epoch:10/100|iter:126| bce_loss: 0.0488 | dice_loss: 0.9279 | total_loss: 0.4884: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:10/100|train_bce_loss: 0.0494|train_dice_loss: 0.8816|train_total_loss: 0.4655|train_f1: 0.2537|train_asd: 7.8975|train_hd95: 34.8568\par
+Val_Epoch:10/100|iter:32| bce_loss: 0.0137 | dice_loss: 0.9221 | total_loss: 0.4679: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:10/100|val_bce_loss: 0.0296|val_dice_loss: 0.7486| val_total_loss: 0.3891|val_f1: 0.5537|val_asd: 2.2048|val_hd95: 12.7592\par
+Best val loss: 0.3891 is saved!\par
+Best train loss: 0.4655 is saved!\par
+Train_Epoch:11/100|iter:126| bce_loss: 0.0416 | dice_loss: 0.8098 | total_loss: 0.4257: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:11/100|train_bce_loss: 0.0431|train_dice_loss: 0.8463|train_total_loss: 0.4447|train_f1: 0.6228|train_asd: 6.7052|train_hd95: 26.7021\par
+Val_Epoch:11/100|iter:32| bce_loss: 0.0117 | dice_loss: 0.9677 | total_loss: 0.4897: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.83it/s]\par
+Val_Epoch:11/100|val_bce_loss: 0.0204|val_dice_loss: 0.7671| val_total_loss: 0.3938|val_f1: 0.1680|val_asd: 0.0000|val_hd95: 19.1207\par
+Best train loss: 0.4447 is saved!\par
+Train_Epoch:12/100|iter:126| bce_loss: 0.0450 | dice_loss: 0.9218 | total_loss: 0.4834: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:12/100|train_bce_loss: 0.0366|train_dice_loss: 0.8252|train_total_loss: 0.4309|train_f1: 0.3397|train_asd: 16.5535|train_hd95: 46.2709\par
+Val_Epoch:12/100|iter:32| bce_loss: 0.0106 | dice_loss: 0.9836 | total_loss: 0.4971: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.87it/s]\par
+Val_Epoch:12/100|val_bce_loss: 0.0208|val_dice_loss: 0.7325| val_total_loss: 0.3766|val_f1: 0.0384|val_asd: 42.5329|val_hd95: 55.5733\par
+Best val loss: 0.3766 is saved!\par
+Best train loss: 0.4309 is saved!\par
+Train_Epoch:13/100|iter:126| bce_loss: 0.0259 | dice_loss: 0.8835 | total_loss: 0.4547: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:13/100|train_bce_loss: 0.0315|train_dice_loss: 0.7925|train_total_loss: 0.4120|train_f1: 0.0558|train_asd: 31.6857|train_hd95: 78.4411\par
+Val_Epoch:13/100|iter:32| bce_loss: 0.0115 | dice_loss: 0.9629 | total_loss: 0.4872: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.74it/s]\par
+Val_Epoch:13/100|val_bce_loss: 0.0237|val_dice_loss: 0.6647| val_total_loss: 0.3442|val_f1: 0.1129|val_asd: 40.7835|val_hd95: 64.5724\par
+Best val loss: 0.3442 is saved!\par
+Best train loss: 0.4120 is saved!\par
+Train_Epoch:14/100|iter:126| bce_loss: 0.0299 | dice_loss: 0.6503 | total_loss: 0.3401: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:59<00:00,  1.06it/s]\par
+Train_Epoch:14/100|train_bce_loss: 0.0280|train_dice_loss: 0.7590|train_total_loss: 0.3935|train_f1: 0.6474|train_asd: 1.4968|train_hd95: 7.2801\par
+Val_Epoch:14/100|iter:32| bce_loss: 0.1412 | dice_loss: 0.9560 | total_loss: 0.5486: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.78it/s]\par
+Val_Epoch:14/100|val_bce_loss: 0.1768|val_dice_loss: 0.8502| val_total_loss: 0.5135|val_f1: 0.0447|val_asd: 53.2665|val_hd95: 113.3349\par
+Best train loss: 0.3935 is saved!\par
+Train_Epoch:15/100|iter:126| bce_loss: 0.0283 | dice_loss: 0.7004 | total_loss: 0.3644: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:15/100|train_bce_loss: 0.0247|train_dice_loss: 0.7327|train_total_loss: 0.3787|train_f1: 0.4021|train_asd: 11.4273|train_hd95: 40.4580\par
+Val_Epoch:15/100|iter:32| bce_loss: 0.0096 | dice_loss: 0.9467 | total_loss: 0.4782: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.86it/s]\par
+Val_Epoch:15/100|val_bce_loss: 0.0201|val_dice_loss: 0.6624| val_total_loss: 0.3413|val_f1: 0.1499|val_asd: 25.2009|val_hd95: 47.6660\par
+Best val loss: 0.3413 is saved!\par
+Best train loss: 0.3787 is saved!\par
+Train_Epoch:16/100|iter:126| bce_loss: 0.0192 | dice_loss: 0.6393 | total_loss: 0.3293: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:16/100|train_bce_loss: 0.0217|train_dice_loss: 0.7021|train_total_loss: 0.3619|train_f1: 0.4955|train_asd: 12.8675|train_hd95: 38.3458\par
+Val_Epoch:16/100|iter:32| bce_loss: 0.0067 | dice_loss: 0.8239 | total_loss: 0.4153: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.84it/s]\par
+Val_Epoch:16/100|val_bce_loss: 0.0195|val_dice_loss: 0.5546| val_total_loss: 0.2871|val_f1: 0.4395|val_asd: 2.7110|val_hd95: 17.7690\par
+Best val loss: 0.2871 is saved!\par
+Best train loss: 0.3619 is saved!\par
+Train_Epoch:17/100|iter:126| bce_loss: 0.0260 | dice_loss: 0.6354 | total_loss: 0.3307: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:17/100|train_bce_loss: 0.0211|train_dice_loss: 0.6783|train_total_loss: 0.3497|train_f1: 0.4429|train_asd: 21.4186|train_hd95: 65.0254\par
+Val_Epoch:17/100|iter:32| bce_loss: 0.0067 | dice_loss: 0.7951 | total_loss: 0.4009: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.81it/s]\par
+Val_Epoch:17/100|val_bce_loss: 0.0223|val_dice_loss: 0.5290| val_total_loss: 0.2756|val_f1: 0.4542|val_asd: 39.5360|val_hd95: 97.0600\par
+Best val loss: 0.2756 is saved!\par
+Best train loss: 0.3497 is saved!\par
+Train_Epoch:18/100|iter:126| bce_loss: 0.0412 | dice_loss: 0.7150 | total_loss: 0.3781: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [02:02<00:00,  1.03it/s]\par
+Train_Epoch:18/100|train_bce_loss: 0.0204|train_dice_loss: 0.6596|train_total_loss: 0.3400|train_f1: 0.2712|train_asd: 19.2583|train_hd95: 55.6641\par
+Val_Epoch:18/100|iter:32| bce_loss: 0.0068 | dice_loss: 0.8310 | total_loss: 0.4189: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.76it/s]\par
+Val_Epoch:18/100|val_bce_loss: 0.0196|val_dice_loss: 0.5440| val_total_loss: 0.2818|val_f1: 0.3927|val_asd: 5.8222|val_hd95: 18.5834\par
+Best train loss: 0.3400 is saved!\par
+Train_Epoch:19/100|iter:126| bce_loss: 0.0192 | dice_loss: 0.5190 | total_loss: 0.2691: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:19/100|train_bce_loss: 0.0195|train_dice_loss: 0.6335|train_total_loss: 0.3265|train_f1: 0.6412|train_asd: 5.6524|train_hd95: 34.2082\par
+Val_Epoch:19/100|iter:32| bce_loss: 0.0091 | dice_loss: 0.7349 | total_loss: 0.3720: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:19/100|val_bce_loss: 0.0370|val_dice_loss: 0.5883| val_total_loss: 0.3126|val_f1: 0.3851|val_asd: 32.5379|val_hd95: 75.5910\par
+Best train loss: 0.3265 is saved!\par
+Train_Epoch:20/100|iter:126| bce_loss: 0.0111 | dice_loss: 0.8423 | total_loss: 0.4267: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:20/100|train_bce_loss: 0.0191|train_dice_loss: 0.6184|train_total_loss: 0.3188|train_f1: 0.2807|train_asd: 26.5660|train_hd95: 85.2479\par
+Val_Epoch:20/100|iter:32| bce_loss: 0.0090 | dice_loss: 0.9043 | total_loss: 0.4566: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.85it/s]\par
+Val_Epoch:20/100|val_bce_loss: 0.0221|val_dice_loss: 0.5909| val_total_loss: 0.3065|val_f1: 0.1877|val_asd: 0.0000|val_hd95: 18.2755\par
+Best train loss: 0.3188 is saved!\par
+Train_Epoch:21/100|iter:126| bce_loss: 0.0202 | dice_loss: 0.5212 | total_loss: 0.2707: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:21/100|train_bce_loss: 0.0193|train_dice_loss: 0.6115|train_total_loss: 0.3154|train_f1: 0.3208|train_asd: 16.7018|train_hd95: 50.2892\par
+Val_Epoch:21/100|iter:32| bce_loss: 0.0085 | dice_loss: 0.8507 | total_loss: 0.4296: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.87it/s]\par
+Val_Epoch:21/100|val_bce_loss: 0.0268|val_dice_loss: 0.6401| val_total_loss: 0.3335|val_f1: 0.3100|val_asd: 0.0000|val_hd95: 17.5911\par
+Best train loss: 0.3154 is saved!\par
+Train_Epoch:22/100|iter:126| bce_loss: 0.0198 | dice_loss: 0.6033 | total_loss: 0.3115: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:22/100|train_bce_loss: 0.0187|train_dice_loss: 0.5915|train_total_loss: 0.3051|train_f1: 0.6900|train_asd: 0.5277|train_hd95: 5.3852\par
+Val_Epoch:22/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.6894 | total_loss: 0.3487: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.79it/s]\par
+Val_Epoch:22/100|val_bce_loss: 0.0341|val_dice_loss: 0.5193| val_total_loss: 0.2767|val_f1: 0.4052|val_asd: 17.5621|val_hd95: 60.2092\par
+Best train loss: 0.3051 is saved!\par
+Train_Epoch:23/100|iter:126| bce_loss: 0.0187 | dice_loss: 0.7335 | total_loss: 0.3761: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:59<00:00,  1.06it/s]\par
+Train_Epoch:23/100|train_bce_loss: 0.0184|train_dice_loss: 0.5801|train_total_loss: 0.2993|train_f1: 0.2902|train_asd: 14.0849|train_hd95: 44.0000\par
+Val_Epoch:23/100|iter:32| bce_loss: 0.0075 | dice_loss: 0.8149 | total_loss: 0.4112: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.81it/s]\par
+Val_Epoch:23/100|val_bce_loss: 0.0207|val_dice_loss: 0.4821| val_total_loss: 0.2514|val_f1: 0.3895|val_asd: 0.0120|val_hd95: 15.9374\par
+Best val loss: 0.2514 is saved!\par
+Best train loss: 0.2993 is saved!\par
+Train_Epoch:24/100|iter:126| bce_loss: 0.0165 | dice_loss: 0.7092 | total_loss: 0.3629: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:24/100|train_bce_loss: 0.0187|train_dice_loss: 0.5723|train_total_loss: 0.2955|train_f1: 0.4224|train_asd: 20.5414|train_hd95: 58.3078\par
+Val_Epoch:24/100|iter:32| bce_loss: 0.0075 | dice_loss: 0.7898 | total_loss: 0.3986: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.80it/s]\par
+Val_Epoch:24/100|val_bce_loss: 0.0215|val_dice_loss: 0.4838| val_total_loss: 0.2527|val_f1: 0.4791|val_asd: 0.0684|val_hd95: 15.4948\par
+Best train loss: 0.2955 is saved!\par
+Train_Epoch:25/100|iter:126| bce_loss: 0.0172 | dice_loss: 0.4941 | total_loss: 0.2557: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:25/100|train_bce_loss: 0.0183|train_dice_loss: 0.5602|train_total_loss: 0.2892|train_f1: 0.7732|train_asd: 1.1170|train_hd95: 5.0000\par
+Val_Epoch:25/100|iter:32| bce_loss: 0.0060 | dice_loss: 0.7072 | total_loss: 0.3566: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.79it/s]\par
+Val_Epoch:25/100|val_bce_loss: 0.0248|val_dice_loss: 0.4368| val_total_loss: 0.2308|val_f1: 0.5429|val_asd: 1.7958|val_hd95: 14.5514\par
+Best val loss: 0.2308 is saved!\par
+Best train loss: 0.2892 is saved!\par
+Train_Epoch:26/100|iter:126| bce_loss: 0.0166 | dice_loss: 0.4802 | total_loss: 0.2484: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:59<00:00,  1.06it/s]\par
+Train_Epoch:26/100|train_bce_loss: 0.0184|train_dice_loss: 0.5524|train_total_loss: 0.2854|train_f1: 0.5572|train_asd: 13.6576|train_hd95: 47.8696\par
+Val_Epoch:26/100|iter:32| bce_loss: 0.0074 | dice_loss: 0.7992 | total_loss: 0.4033: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:26/100|val_bce_loss: 0.0219|val_dice_loss: 0.4446| val_total_loss: 0.2333|val_f1: 0.4157|val_asd: 1.3897|val_hd95: 16.3278\par
+Best train loss: 0.2854 is saved!\par
+Train_Epoch:27/100|iter:126| bce_loss: 0.0213 | dice_loss: 0.7428 | total_loss: 0.3821: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:27/100|train_bce_loss: 0.0180|train_dice_loss: 0.5411|train_total_loss: 0.2796|train_f1: 0.3315|train_asd: 28.8129|train_hd95: 102.1919\par
+Val_Epoch:27/100|iter:32| bce_loss: 0.0096 | dice_loss: 0.8661 | total_loss: 0.4378: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.85it/s]\par
+Val_Epoch:27/100|val_bce_loss: 0.0229|val_dice_loss: 0.4686| val_total_loss: 0.2458|val_f1: 0.2442|val_asd: 0.0000|val_hd95: 18.0264\par
+Best train loss: 0.2796 is saved!\par
+Train_Epoch:28/100|iter:126| bce_loss: 0.0136 | dice_loss: 0.5352 | total_loss: 0.2744: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:28/100|train_bce_loss: 0.0185|train_dice_loss: 0.5375|train_total_loss: 0.2780|train_f1: 0.5781|train_asd: 4.6096|train_hd95: 19.1311\par
+Val_Epoch:28/100|iter:32| bce_loss: 0.0054 | dice_loss: 0.6639 | total_loss: 0.3347: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.86it/s]\par
+Val_Epoch:28/100|val_bce_loss: 0.0294|val_dice_loss: 0.4510| val_total_loss: 0.2402|val_f1: 0.5624|val_asd: 12.7361|val_hd95: 44.0704\par
+Best train loss: 0.2780 is saved!\par
+Train_Epoch:29/100|iter:126| bce_loss: 0.0215 | dice_loss: 0.7304 | total_loss: 0.3760: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:29/100|train_bce_loss: 0.0181|train_dice_loss: 0.5320|train_total_loss: 0.2751|train_f1: 0.4546|train_asd: 7.3474|train_hd95: 24.3629\par
+Val_Epoch:29/100|iter:32| bce_loss: 0.0075 | dice_loss: 0.7890 | total_loss: 0.3982: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.86it/s]\par
+Val_Epoch:29/100|val_bce_loss: 0.0229|val_dice_loss: 0.4605| val_total_loss: 0.2417|val_f1: 0.4535|val_asd: 0.0291|val_hd95: 15.9374\par
+Best train loss: 0.2751 is saved!\par
+Train_Epoch:30/100|iter:126| bce_loss: 0.0204 | dice_loss: 0.4315 | total_loss: 0.2259: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:30/100|train_bce_loss: 0.0182|train_dice_loss: 0.5290|train_total_loss: 0.2736|train_f1: 0.6181|train_asd: 6.9775|train_hd95: 26.3496\par
+Val_Epoch:30/100|iter:32| bce_loss: 0.0087 | dice_loss: 0.8183 | total_loss: 0.4135: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.83it/s]\par
+Val_Epoch:30/100|val_bce_loss: 0.0258|val_dice_loss: 0.4430| val_total_loss: 0.2344|val_f1: 0.3844|val_asd: 8.0841|val_hd95: 14.9197\par
+Best train loss: 0.2736 is saved!\par
+Train_Epoch:31/100|iter:126| bce_loss: 0.0115 | dice_loss: 0.6715 | total_loss: 0.3415: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:31/100|train_bce_loss: 0.0181|train_dice_loss: 0.5229|train_total_loss: 0.2705|train_f1: 0.5610|train_asd: 6.3754|train_hd95: 29.5770\par
+Val_Epoch:31/100|iter:32| bce_loss: 0.0088 | dice_loss: 0.8268 | total_loss: 0.4178: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.80it/s]\par
+Val_Epoch:31/100|val_bce_loss: 0.0239|val_dice_loss: 0.5265| val_total_loss: 0.2752|val_f1: 0.3472|val_asd: 0.0000|val_hd95: 16.7985\par
+Epoch 00031: reducing learning rate of group 0 to 1.0000e-05.\par
+Best train loss: 0.2705 is saved!\par
+Train_Epoch:32/100|iter:126| bce_loss: 0.0322 | dice_loss: 0.5668 | total_loss: 0.2995: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:32/100|train_bce_loss: 0.0167|train_dice_loss: 0.4936|train_total_loss: 0.2551|train_f1: 0.3384|train_asd: 8.7440|train_hd95: 36.6333\par
+Val_Epoch:32/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7833 | total_loss: 0.3955: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.76it/s]\par
+Val_Epoch:32/100|val_bce_loss: 0.0225|val_dice_loss: 0.4707| val_total_loss: 0.2466|val_f1: 0.4564|val_asd: 3.5329|val_hd95: 17.0925\par
+Best train loss: 0.2551 is saved!\par
+Train_Epoch:33/100|iter:126| bce_loss: 0.0104 | dice_loss: 0.5265 | total_loss: 0.2685: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:33/100|train_bce_loss: 0.0167|train_dice_loss: 0.4828|train_total_loss: 0.2497|train_f1: 0.4070|train_asd: 33.9692|train_hd95: 107.4565\par
+Val_Epoch:33/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7895 | total_loss: 0.3987: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.78it/s]\par
+Val_Epoch:33/100|val_bce_loss: 0.0228|val_dice_loss: 0.4532| val_total_loss: 0.2380|val_f1: 0.4505|val_asd: 2.4442|val_hd95: 16.5814\par
+Best train loss: 0.2497 is saved!\par
+Train_Epoch:34/100|iter:126| bce_loss: 0.0101 | dice_loss: 0.4368 | total_loss: 0.2234: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:34/100|train_bce_loss: 0.0166|train_dice_loss: 0.4786|train_total_loss: 0.2476|train_f1: 0.7568|train_asd: 4.6350|train_hd95: 8.8409\par
+Val_Epoch:34/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7907 | total_loss: 0.3993: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.73it/s]\par
+Val_Epoch:34/100|val_bce_loss: 0.0229|val_dice_loss: 0.4572| val_total_loss: 0.2400|val_f1: 0.4465|val_asd: 0.6591|val_hd95: 16.2512\par
+Best train loss: 0.2476 is saved!\par
+Train_Epoch:35/100|iter:126| bce_loss: 0.0100 | dice_loss: 0.5297 | total_loss: 0.2699: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:59<00:00,  1.06it/s]\par
+Train_Epoch:35/100|train_bce_loss: 0.0166|train_dice_loss: 0.4791|train_total_loss: 0.2478|train_f1: 0.5370|train_asd: 13.1991|train_hd95: 80.0394\par
+Val_Epoch:35/100|iter:32| bce_loss: 0.0071 | dice_loss: 0.7501 | total_loss: 0.3786: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.73it/s]\par
+Val_Epoch:35/100|val_bce_loss: 0.0229|val_dice_loss: 0.4536| val_total_loss: 0.2383|val_f1: 0.4881|val_asd: 0.6079|val_hd95: 15.3133\par
+Train_Epoch:36/100|iter:126| bce_loss: 0.0268 | dice_loss: 0.4177 | total_loss: 0.2223: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:36/100|train_bce_loss: 0.0165|train_dice_loss: 0.4752|train_total_loss: 0.2459|train_f1: 0.7851|train_asd: 1.0501|train_hd95: 6.3246\par
+Val_Epoch:36/100|iter:32| bce_loss: 0.0075 | dice_loss: 0.7670 | total_loss: 0.3873: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.76it/s]\par
+Val_Epoch:36/100|val_bce_loss: 0.0230|val_dice_loss: 0.4481| val_total_loss: 0.2355|val_f1: 0.4814|val_asd: 0.0756|val_hd95: 15.4466\par
+Best train loss: 0.2459 is saved!\par
+Train_Epoch:37/100|iter:126| bce_loss: 0.0273 | dice_loss: 0.5530 | total_loss: 0.2901: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:37/100|train_bce_loss: 0.0164|train_dice_loss: 0.4711|train_total_loss: 0.2437|train_f1: 0.4653|train_asd: 23.3962|train_hd95: 86.2044\par
+Val_Epoch:37/100|iter:32| bce_loss: 0.0083 | dice_loss: 0.7948 | total_loss: 0.4015: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.74it/s]\par
+Val_Epoch:37/100|val_bce_loss: 0.0233|val_dice_loss: 0.4643| val_total_loss: 0.2438|val_f1: 0.4332|val_asd: 0.0208|val_hd95: 16.0461\par
+Epoch 00037: reducing learning rate of group 0 to 1.0000e-06.\par
+Best train loss: 0.2437 is saved!\par
+Train_Epoch:38/100|iter:126| bce_loss: 0.0141 | dice_loss: 0.5196 | total_loss: 0.2669: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:38/100|train_bce_loss: 0.0163|train_dice_loss: 0.4682|train_total_loss: 0.2423|train_f1: 0.5051|train_asd: 10.8452|train_hd95: 38.3835\par
+Val_Epoch:38/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7912 | total_loss: 0.3995: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:38/100|val_bce_loss: 0.0233|val_dice_loss: 0.4571| val_total_loss: 0.2402|val_f1: 0.4176|val_asd: 0.0323|val_hd95: 15.9374\par
+Best train loss: 0.2423 is saved!\par
+Train_Epoch:39/100|iter:126| bce_loss: 0.0137 | dice_loss: 0.3152 | total_loss: 0.1644: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:39/100|train_bce_loss: 0.0166|train_dice_loss: 0.4677|train_total_loss: 0.2421|train_f1: 0.7204|train_asd: 7.4896|train_hd95: 39.6737\par
+Val_Epoch:39/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7901 | total_loss: 0.3990: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.75it/s]\par
+Val_Epoch:39/100|val_bce_loss: 0.0230|val_dice_loss: 0.4581| val_total_loss: 0.2406|val_f1: 0.4276|val_asd: 0.0412|val_hd95: 15.9374\par
+Best train loss: 0.2421 is saved!\par
+Train_Epoch:40/100|iter:126| bce_loss: 0.0090 | dice_loss: 0.5356 | total_loss: 0.2723: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.08it/s]\par
+Train_Epoch:40/100|train_bce_loss: 0.0163|train_dice_loss: 0.4671|train_total_loss: 0.2417|train_f1: 0.6346|train_asd: 6.8102|train_hd95: 34.8884\par
+Val_Epoch:40/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7888 | total_loss: 0.3982: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.81it/s]\par
+Val_Epoch:40/100|val_bce_loss: 0.0231|val_dice_loss: 0.4556| val_total_loss: 0.2394|val_f1: 0.4112|val_asd: 0.0222|val_hd95: 16.1393\par
+Best train loss: 0.2417 is saved!\par
+Train_Epoch:41/100|iter:126| bce_loss: 0.0115 | dice_loss: 0.3546 | total_loss: 0.1830: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:41/100|train_bce_loss: 0.0163|train_dice_loss: 0.4671|train_total_loss: 0.2417|train_f1: 0.7661|train_asd: 9.3230|train_hd95: 43.7613\par
+Val_Epoch:41/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7902 | total_loss: 0.3990: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.79it/s]\par
+Val_Epoch:41/100|val_bce_loss: 0.0232|val_dice_loss: 0.4619| val_total_loss: 0.2426|val_f1: 0.4186|val_asd: 0.0217|val_hd95: 16.1083\par
+Train_Epoch:42/100|iter:126| bce_loss: 0.0153 | dice_loss: 0.5156 | total_loss: 0.2655: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:42/100|train_bce_loss: 0.0163|train_dice_loss: 0.4663|train_total_loss: 0.2413|train_f1: 0.6606|train_asd: 8.3380|train_hd95: 58.0793\par
+Val_Epoch:42/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7938 | total_loss: 0.4008: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:42/100|val_bce_loss: 0.0231|val_dice_loss: 0.4603| val_total_loss: 0.2417|val_f1: 0.4038|val_asd: 0.0227|val_hd95: 16.3706\par
+Best train loss: 0.2413 is saved!\par
+Train_Epoch:43/100|iter:126| bce_loss: 0.0273 | dice_loss: 0.5279 | total_loss: 0.2776: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:43/100|train_bce_loss: 0.0163|train_dice_loss: 0.4669|train_total_loss: 0.2416|train_f1: 0.6543|train_asd: 16.1258|train_hd95: 62.3779\par
+Val_Epoch:43/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7929 | total_loss: 0.4003: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.87it/s]\par
+Val_Epoch:43/100|val_bce_loss: 0.0232|val_dice_loss: 0.4629| val_total_loss: 0.2430|val_f1: 0.4038|val_asd: 0.0227|val_hd95: 16.3706\par
+Epoch 00043: reducing learning rate of group 0 to 1.0000e-07.\par
+Train_Epoch:44/100|iter:126| bce_loss: 0.0172 | dice_loss: 0.5417 | total_loss: 0.2794: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:44/100|train_bce_loss: 0.0163|train_dice_loss: 0.4649|train_total_loss: 0.2406|train_f1: 0.6101|train_asd: 1.6302|train_hd95: 7.2111\par
+Val_Epoch:44/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7875 | total_loss: 0.3976: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.86it/s]\par
+Val_Epoch:44/100|val_bce_loss: 0.0231|val_dice_loss: 0.4525| val_total_loss: 0.2378|val_f1: 0.4384|val_asd: 0.0400|val_hd95: 15.9374\par
+Best train loss: 0.2406 is saved!\par
+Train_Epoch:45/100|iter:126| bce_loss: 0.0166 | dice_loss: 0.3734 | total_loss: 0.1950: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:45/100|train_bce_loss: 0.0163|train_dice_loss: 0.4660|train_total_loss: 0.2412|train_f1: 0.7518|train_asd: 1.2808|train_hd95: 12.2066\par
+Val_Epoch:45/100|iter:32| bce_loss: 0.0076 | dice_loss: 0.7848 | total_loss: 0.3962: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.87it/s]\par
+Val_Epoch:45/100|val_bce_loss: 0.0230|val_dice_loss: 0.4522| val_total_loss: 0.2376|val_f1: 0.4249|val_asd: 0.0316|val_hd95: 15.8618\par
+Train_Epoch:46/100|iter:126| bce_loss: 0.0118 | dice_loss: 0.4558 | total_loss: 0.2338: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:46/100|train_bce_loss: 0.0164|train_dice_loss: 0.4671|train_total_loss: 0.2418|train_f1: 0.7536|train_asd: 2.2735|train_hd95: 12.0416\par
+Val_Epoch:46/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7904 | total_loss: 0.3991: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.88it/s]\par
+Val_Epoch:46/100|val_bce_loss: 0.0232|val_dice_loss: 0.4552| val_total_loss: 0.2392|val_f1: 0.4176|val_asd: 0.0323|val_hd95: 15.9374\par
+Train_Epoch:47/100|iter:126| bce_loss: 0.0144 | dice_loss: 0.4155 | total_loss: 0.2150: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:47/100|train_bce_loss: 0.0163|train_dice_loss: 0.4651|train_total_loss: 0.2407|train_f1: 0.6327|train_asd: 3.0295|train_hd95: 22.1292\par
+Val_Epoch:47/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7889 | total_loss: 0.3983: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.84it/s]\par
+Val_Epoch:47/100|val_bce_loss: 0.0233|val_dice_loss: 0.4538| val_total_loss: 0.2386|val_f1: 0.4276|val_asd: 0.0412|val_hd95: 15.8492\par
+Train_Epoch:48/100|iter:126| bce_loss: 0.0105 | dice_loss: 0.3867 | total_loss: 0.1986: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:48/100|train_bce_loss: 0.0162|train_dice_loss: 0.4636|train_total_loss: 0.2399|train_f1: 0.7961|train_asd: 0.6898|train_hd95: 2.0000\par
+Val_Epoch:48/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7889 | total_loss: 0.3984: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.88it/s]\par
+Val_Epoch:48/100|val_bce_loss: 0.0232|val_dice_loss: 0.4571| val_total_loss: 0.2402|val_f1: 0.4312|val_asd: 0.0408|val_hd95: 15.8429\par
+Best train loss: 0.2399 is saved!\par
+Train_Epoch:49/100|iter:126| bce_loss: 0.0131 | dice_loss: 0.5385 | total_loss: 0.2758: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:49/100|train_bce_loss: 0.0163|train_dice_loss: 0.4659|train_total_loss: 0.2411|train_f1: 0.5429|train_asd: 26.4528|train_hd95: 82.1219\par
+Val_Epoch:49/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7926 | total_loss: 0.4002: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.87it/s]\par
+Val_Epoch:49/100|val_bce_loss: 0.0232|val_dice_loss: 0.4611| val_total_loss: 0.2422|val_f1: 0.4186|val_asd: 0.0217|val_hd95: 16.1083\par
+Epoch 00049: reducing learning rate of group 0 to 1.0000e-08.\par
+Train_Epoch:50/100|iter:126| bce_loss: 0.0306 | dice_loss: 0.5874 | total_loss: 0.3090: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:50/100|train_bce_loss: 0.0164|train_dice_loss: 0.4682|train_total_loss: 0.2423|train_f1: 0.4731|train_asd: 6.0835|train_hd95: 31.7805\par
+Val_Epoch:50/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7820 | total_loss: 0.3949: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.83it/s]\par
+Val_Epoch:50/100|val_bce_loss: 0.0233|val_dice_loss: 0.4554| val_total_loss: 0.2394|val_f1: 0.4389|val_asd: 0.0673|val_hd95: 15.5193\par
+Train_Epoch:51/100|iter:126| bce_loss: 0.0114 | dice_loss: 0.3766 | total_loss: 0.1940: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:51/100|train_bce_loss: 0.0162|train_dice_loss: 0.4647|train_total_loss: 0.2404|train_f1: 0.7432|train_asd: 2.6299|train_hd95: 13.0230\par
+Val_Epoch:51/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7880 | total_loss: 0.3979: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.77it/s]\par
+Val_Epoch:51/100|val_bce_loss: 0.0233|val_dice_loss: 0.4550| val_total_loss: 0.2391|val_f1: 0.4455|val_asd: 0.0392|val_hd95: 15.9374\par
+Train_Epoch:52/100|iter:126| bce_loss: 0.0286 | dice_loss: 0.6282 | total_loss: 0.3284: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.08it/s]\par
+Train_Epoch:52/100|train_bce_loss: 0.0164|train_dice_loss: 0.4678|train_total_loss: 0.2421|train_f1: 0.5771|train_asd: 9.9623|train_hd95: 88.1067\par
+Val_Epoch:52/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7932 | total_loss: 0.4005: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.76it/s]\par
+Val_Epoch:52/100|val_bce_loss: 0.0231|val_dice_loss: 0.4624| val_total_loss: 0.2427|val_f1: 0.4149|val_asd: 0.0220|val_hd95: 16.1238\par
+Train_Epoch:53/100|iter:126| bce_loss: 0.0141 | dice_loss: 0.4616 | total_loss: 0.2378: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:53/100|train_bce_loss: 0.0162|train_dice_loss: 0.4646|train_total_loss: 0.2404|train_f1: 0.5500|train_asd: 20.4321|train_hd95: 68.0955\par
+Val_Epoch:53/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7875 | total_loss: 0.3976: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.77it/s]\par
+Val_Epoch:53/100|val_bce_loss: 0.0232|val_dice_loss: 0.4562| val_total_loss: 0.2397|val_f1: 0.4240|val_asd: 0.0417|val_hd95: 15.8555\par
+Train_Epoch:54/100|iter:126| bce_loss: 0.0219 | dice_loss: 0.7211 | total_loss: 0.3715: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:54/100|train_bce_loss: 0.0163|train_dice_loss: 0.4676|train_total_loss: 0.2419|train_f1: 0.5999|train_asd: 2.9530|train_hd95: 12.0830\par
+Val_Epoch:54/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7936 | total_loss: 0.4007: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.77it/s]\par
+Val_Epoch:54/100|val_bce_loss: 0.0231|val_dice_loss: 0.4611| val_total_loss: 0.2421|val_f1: 0.4203|val_asd: 0.0421|val_hd95: 15.9374\par
+Train_Epoch:55/100|iter:126| bce_loss: 0.0074 | dice_loss: 0.3136 | total_loss: 0.1605: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:55/100|train_bce_loss: 0.0163|train_dice_loss: 0.4641|train_total_loss: 0.2402|train_f1: 0.7055|train_asd: 1.1848|train_hd95: 3.1623\par
+Val_Epoch:55/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7879 | total_loss: 0.3979: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.79it/s]\par
+Val_Epoch:55/100|val_bce_loss: 0.0231|val_dice_loss: 0.4540| val_total_loss: 0.2386|val_f1: 0.4338|val_asd: 0.0500|val_hd95: 15.8303\par
+Train_Epoch:56/100|iter:126| bce_loss: 0.0092 | dice_loss: 0.3493 | total_loss: 0.1792: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:56/100|train_bce_loss: 0.0163|train_dice_loss: 0.4647|train_total_loss: 0.2405|train_f1: 0.8285|train_asd: 1.3597|train_hd95: 2.2361\par
+Val_Epoch:56/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7866 | total_loss: 0.3972: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.80it/s]\par
+Val_Epoch:56/100|val_bce_loss: 0.0233|val_dice_loss: 0.4558| val_total_loss: 0.2395|val_f1: 0.4338|val_asd: 0.0500|val_hd95: 15.8303\par
+Train_Epoch:57/100|iter:126| bce_loss: 0.0177 | dice_loss: 0.6146 | total_loss: 0.3162: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:57/100|train_bce_loss: 0.0162|train_dice_loss: 0.4670|train_total_loss: 0.2416|train_f1: 0.4664|train_asd: 12.9393|train_hd95: 54.2038\par
+Val_Epoch:57/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7994 | total_loss: 0.4036: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.83it/s]\par
+Val_Epoch:57/100|val_bce_loss: 0.0230|val_dice_loss: 0.4618| val_total_loss: 0.2424|val_f1: 0.3962|val_asd: 0.0233|val_hd95: 16.3829\par
+Train_Epoch:58/100|iter:126| bce_loss: 0.0043 | dice_loss: 0.4136 | total_loss: 0.2089: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:58/100|train_bce_loss: 0.0162|train_dice_loss: 0.4650|train_total_loss: 0.2406|train_f1: 0.7517|train_asd: 2.4733|train_hd95: 3.6056\par
+Val_Epoch:58/100|iter:32| bce_loss: 0.0076 | dice_loss: 0.7805 | total_loss: 0.3941: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.84it/s]\par
+Val_Epoch:58/100|val_bce_loss: 0.0234|val_dice_loss: 0.4529| val_total_loss: 0.2381|val_f1: 0.4424|val_asd: 0.0667|val_hd95: 15.5145\par
+Train_Epoch:59/100|iter:126| bce_loss: 0.0318 | dice_loss: 0.5761 | total_loss: 0.3040: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:59/100|train_bce_loss: 0.0165|train_dice_loss: 0.4688|train_total_loss: 0.2426|train_f1: 0.3953|train_asd: 25.0165|train_hd95: 64.8952\par
+Val_Epoch:59/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7947 | total_loss: 0.4013: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.85it/s]\par
+Val_Epoch:59/100|val_bce_loss: 0.0234|val_dice_loss: 0.4682| val_total_loss: 0.2458|val_f1: 0.4269|val_asd: 0.0108|val_hd95: 16.0927\par
+Train_Epoch:60/100|iter:126| bce_loss: 0.0189 | dice_loss: 0.4975 | total_loss: 0.2582: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:60/100|train_bce_loss: 0.0165|train_dice_loss: 0.4677|train_total_loss: 0.2421|train_f1: 0.6486|train_asd: 6.0292|train_hd95: 32.1060\par
+Val_Epoch:60/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7924 | total_loss: 0.4002: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.83it/s]\par
+Val_Epoch:60/100|val_bce_loss: 0.0232|val_dice_loss: 0.4622| val_total_loss: 0.2427|val_f1: 0.4176|val_asd: 0.0323|val_hd95: 15.9374\par
+Train_Epoch:61/100|iter:126| bce_loss: 0.0155 | dice_loss: 0.4175 | total_loss: 0.2165: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:61/100|train_bce_loss: 0.0162|train_dice_loss: 0.4652|train_total_loss: 0.2407|train_f1: 0.6224|train_asd: 5.2708|train_hd95: 22.2261\par
+Val_Epoch:61/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7895 | total_loss: 0.3986: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.86it/s]\par
+Val_Epoch:61/100|val_bce_loss: 0.0232|val_dice_loss: 0.4584| val_total_loss: 0.2408|val_f1: 0.4322|val_asd: 0.0309|val_hd95: 15.9374\par
+Train_Epoch:62/100|iter:126| bce_loss: 0.0217 | dice_loss: 0.5341 | total_loss: 0.2779: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:62/100|train_bce_loss: 0.0162|train_dice_loss: 0.4661|train_total_loss: 0.2412|train_f1: 0.6108|train_asd: 2.3956|train_hd95: 9.0578\par
+Val_Epoch:62/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7906 | total_loss: 0.3992: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.88it/s]\par
+Val_Epoch:62/100|val_bce_loss: 0.0232|val_dice_loss: 0.4579| val_total_loss: 0.2405|val_f1: 0.4332|val_asd: 0.0208|val_hd95: 16.0461\par
+Train_Epoch:63/100|iter:126| bce_loss: 0.0129 | dice_loss: 0.3376 | total_loss: 0.1753: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:63/100|train_bce_loss: 0.0163|train_dice_loss: 0.4651|train_total_loss: 0.2407|train_f1: 0.5614|train_asd: 12.2838|train_hd95: 44.4904\par
+Val_Epoch:63/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7906 | total_loss: 0.3993: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.86it/s]\par
+Val_Epoch:63/100|val_bce_loss: 0.0234|val_dice_loss: 0.4595| val_total_loss: 0.2414|val_f1: 0.4213|val_asd: 0.0319|val_hd95: 15.9374\par
+Train_Epoch:64/100|iter:126| bce_loss: 0.0426 | dice_loss: 0.5829 | total_loss: 0.3127: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:64/100|train_bce_loss: 0.0165|train_dice_loss: 0.4656|train_total_loss: 0.2411|train_f1: 0.4288|train_asd: 8.8011|train_hd95: 28.7775\par
+Val_Epoch:64/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7918 | total_loss: 0.3999: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.84it/s]\par
+Val_Epoch:64/100|val_bce_loss: 0.0233|val_dice_loss: 0.4593| val_total_loss: 0.2413|val_f1: 0.4249|val_asd: 0.0316|val_hd95: 15.9374\par
+Train_Epoch:65/100|iter:126| bce_loss: 0.0286 | dice_loss: 0.4106 | total_loss: 0.2196: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:65/100|train_bce_loss: 0.0163|train_dice_loss: 0.4660|train_total_loss: 0.2412|train_f1: 0.6647|train_asd: 2.1354|train_hd95: 7.5498\par
+Val_Epoch:65/100|iter:32| bce_loss: 0.0080 | dice_loss: 0.7966 | total_loss: 0.4023: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:65/100|val_bce_loss: 0.0231|val_dice_loss: 0.4586| val_total_loss: 0.2408|val_f1: 0.4065|val_asd: 0.0333|val_hd95: 16.1393\par
+Train_Epoch:66/100|iter:126| bce_loss: 0.0110 | dice_loss: 0.4281 | total_loss: 0.2196: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:66/100|train_bce_loss: 0.0163|train_dice_loss: 0.4666|train_total_loss: 0.2414|train_f1: 0.6963|train_asd: 7.4215|train_hd95: 45.3327\par
+Val_Epoch:66/100|iter:32| bce_loss: 0.0076 | dice_loss: 0.7806 | total_loss: 0.3941: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.81it/s]\par
+Val_Epoch:66/100|val_bce_loss: 0.0234|val_dice_loss: 0.4576| val_total_loss: 0.2405|val_f1: 0.4394|val_asd: 0.0303|val_hd95: 15.9374\par
+Train_Epoch:67/100|iter:126| bce_loss: 0.0251 | dice_loss: 0.5134 | total_loss: 0.2692: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.08it/s]\par
+Train_Epoch:67/100|train_bce_loss: 0.0165|train_dice_loss: 0.4663|train_total_loss: 0.2414|train_f1: 0.6487|train_asd: 5.1416|train_hd95: 19.2354\par
+Val_Epoch:67/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7915 | total_loss: 0.3996: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.77it/s]\par
+Val_Epoch:67/100|val_bce_loss: 0.0234|val_dice_loss: 0.4629| val_total_loss: 0.2431|val_f1: 0.4296|val_asd: 0.0211|val_hd95: 16.0617\par
+Train_Epoch:68/100|iter:126| bce_loss: 0.0409 | dice_loss: 0.5428 | total_loss: 0.2919: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:56<00:00,  1.08it/s]\par
+Train_Epoch:68/100|train_bce_loss: 0.0165|train_dice_loss: 0.4687|train_total_loss: 0.2426|train_f1: 0.2203|train_asd: 26.1880|train_hd95: 51.6333\par
+Val_Epoch:68/100|iter:32| bce_loss: 0.0080 | dice_loss: 0.8000 | total_loss: 0.4040: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.77it/s]\par
+Val_Epoch:68/100|val_bce_loss: 0.0233|val_dice_loss: 0.4658| val_total_loss: 0.2446|val_f1: 0.3972|val_asd: 0.0118|val_hd95: 16.3890\par
+Train_Epoch:69/100|iter:126| bce_loss: 0.0218 | dice_loss: 0.5042 | total_loss: 0.2630: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:69/100|train_bce_loss: 0.0164|train_dice_loss: 0.4662|train_total_loss: 0.2413|train_f1: 0.4942|train_asd: 14.0792|train_hd95: 47.1699\par
+Val_Epoch:69/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7964 | total_loss: 0.4022: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:69/100|val_bce_loss: 0.0230|val_dice_loss: 0.4566| val_total_loss: 0.2398|val_f1: 0.4028|val_asd: 0.0337|val_hd95: 16.1549\par
+Train_Epoch:70/100|iter:126| bce_loss: 0.0290 | dice_loss: 0.5912 | total_loss: 0.3101: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:70/100|train_bce_loss: 0.0165|train_dice_loss: 0.4678|train_total_loss: 0.2421|train_f1: 0.3591|train_asd: 45.2046|train_hd95: 91.6842\par
+Val_Epoch:70/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7955 | total_loss: 0.4017: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.81it/s]\par
+Val_Epoch:70/100|val_bce_loss: 0.0233|val_dice_loss: 0.4666| val_total_loss: 0.2449|val_f1: 0.4233|val_asd: 0.0109|val_hd95: 16.1083\par
+Train_Epoch:71/100|iter:126| bce_loss: 0.0091 | dice_loss: 0.4489 | total_loss: 0.2290: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:71/100|train_bce_loss: 0.0162|train_dice_loss: 0.4650|train_total_loss: 0.2406|train_f1: 0.6701|train_asd: 11.0636|train_hd95: 51.0000\par
+Val_Epoch:71/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7907 | total_loss: 0.3992: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.83it/s]\par
+Val_Epoch:71/100|val_bce_loss: 0.0231|val_dice_loss: 0.4567| val_total_loss: 0.2399|val_f1: 0.4140|val_asd: 0.0326|val_hd95: 15.9374\par
+Train_Epoch:72/100|iter:126| bce_loss: 0.0086 | dice_loss: 0.3715 | total_loss: 0.1901: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:56<00:00,  1.08it/s]\par
+Train_Epoch:72/100|train_bce_loss: 0.0162|train_dice_loss: 0.4653|train_total_loss: 0.2407|train_f1: 0.7860|train_asd: 0.6517|train_hd95: 3.6056\par
+Val_Epoch:72/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7905 | total_loss: 0.3992: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.87it/s]\par
+Val_Epoch:72/100|val_bce_loss: 0.0230|val_dice_loss: 0.4561| val_total_loss: 0.2395|val_f1: 0.4338|val_asd: 0.0500|val_hd95: 15.8303\par
+Train_Epoch:73/100|iter:126| bce_loss: 0.0146 | dice_loss: 0.3137 | total_loss: 0.1642: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:73/100|train_bce_loss: 0.0163|train_dice_loss: 0.4671|train_total_loss: 0.2417|train_f1: 0.7861|train_asd: 0.6880|train_hd95: 2.2361\par
+Val_Epoch:73/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7908 | total_loss: 0.3993: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.85it/s]\par
+Val_Epoch:73/100|val_bce_loss: 0.0233|val_dice_loss: 0.4598| val_total_loss: 0.2415|val_f1: 0.4176|val_asd: 0.0323|val_hd95: 15.9374\par
+Train_Epoch:74/100|iter:126| bce_loss: 0.0144 | dice_loss: 0.4119 | total_loss: 0.2131: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:74/100|train_bce_loss: 0.0164|train_dice_loss: 0.4661|train_total_loss: 0.2412|train_f1: 0.5847|train_asd: 4.3326|train_hd95: 13.9642\par
+Val_Epoch:74/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7893 | total_loss: 0.3985: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:16<00:00,  1.89it/s]\par
+Val_Epoch:74/100|val_bce_loss: 0.0233|val_dice_loss: 0.4570| val_total_loss: 0.2402|val_f1: 0.4286|val_asd: 0.0312|val_hd95: 15.9374\par
+Train_Epoch:75/100|iter:126| bce_loss: 0.0143 | dice_loss: 0.3188 | total_loss: 0.1665: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:75/100|train_bce_loss: 0.0162|train_dice_loss: 0.4653|train_total_loss: 0.2407|train_f1: 0.8419|train_asd: 0.8075|train_hd95: 3.1623\par
+Val_Epoch:75/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7898 | total_loss: 0.3989: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.86it/s]\par
+Val_Epoch:75/100|val_bce_loss: 0.0232|val_dice_loss: 0.4584| val_total_loss: 0.2408|val_f1: 0.4312|val_asd: 0.0408|val_hd95: 15.8429\par
+Train_Epoch:76/100|iter:126| bce_loss: 0.0121 | dice_loss: 0.4003 | total_loss: 0.2062: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:76/100|train_bce_loss: 0.0162|train_dice_loss: 0.4659|train_total_loss: 0.2411|train_f1: 0.7012|train_asd: 3.7623|train_hd95: 18.9683\par
+Val_Epoch:76/100|iter:32| bce_loss: 0.0076 | dice_loss: 0.7835 | total_loss: 0.3956: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.80it/s]\par
+Val_Epoch:76/100|val_bce_loss: 0.0232|val_dice_loss: 0.4545| val_total_loss: 0.2388|val_f1: 0.4348|val_asd: 0.0404|val_hd95: 15.8366\par
+Train_Epoch:77/100|iter:126| bce_loss: 0.0185 | dice_loss: 0.3988 | total_loss: 0.2086: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:77/100|train_bce_loss: 0.0161|train_dice_loss: 0.4632|train_total_loss: 0.2397|train_f1: 0.6696|train_asd: 3.8179|train_hd95: 17.4929\par
+Val_Epoch:77/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7858 | total_loss: 0.3968: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:77/100|val_bce_loss: 0.0231|val_dice_loss: 0.4574| val_total_loss: 0.2402|val_f1: 0.4266|val_asd: 0.0510|val_hd95: 15.8429\par
+Best train loss: 0.2397 is saved!\par
+Train_Epoch:78/100|iter:126| bce_loss: 0.0155 | dice_loss: 0.5636 | total_loss: 0.2895: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.08it/s]\par
+Train_Epoch:78/100|train_bce_loss: 0.0164|train_dice_loss: 0.4681|train_total_loss: 0.2422|train_f1: 0.5624|train_asd: 33.1973|train_hd95: 111.0698\par
+Val_Epoch:78/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7894 | total_loss: 0.3985: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.75it/s]\par
+Val_Epoch:78/100|val_bce_loss: 0.0232|val_dice_loss: 0.4554| val_total_loss: 0.2393|val_f1: 0.4296|val_asd: 0.0211|val_hd95: 16.0617\par
+Train_Epoch:79/100|iter:126| bce_loss: 0.0411 | dice_loss: 0.5011 | total_loss: 0.2711: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:56<00:00,  1.08it/s]\par
+Train_Epoch:79/100|train_bce_loss: 0.0163|train_dice_loss: 0.4650|train_total_loss: 0.2407|train_f1: 0.6689|train_asd: 1.9283|train_hd95: 13.0748\par
+Val_Epoch:79/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7966 | total_loss: 0.4022: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.76it/s]\par
+Val_Epoch:79/100|val_bce_loss: 0.0231|val_dice_loss: 0.4598| val_total_loss: 0.2415|val_f1: 0.4112|val_asd: 0.0222|val_hd95: 16.1393\par
+Train_Epoch:80/100|iter:126| bce_loss: 0.0116 | dice_loss: 0.4262 | total_loss: 0.2189: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:80/100|train_bce_loss: 0.0164|train_dice_loss: 0.4671|train_total_loss: 0.2418|train_f1: 0.7499|train_asd: 0.4844|train_hd95: 2.2361\par
+Val_Epoch:80/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7893 | total_loss: 0.3985: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.79it/s]\par
+Val_Epoch:80/100|val_bce_loss: 0.0232|val_dice_loss: 0.4574| val_total_loss: 0.2403|val_f1: 0.4286|val_asd: 0.0312|val_hd95: 15.9374\par
+Train_Epoch:81/100|iter:126| bce_loss: 0.0152 | dice_loss: 0.7352 | total_loss: 0.3752: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:81/100|train_bce_loss: 0.0163|train_dice_loss: 0.4662|train_total_loss: 0.2413|train_f1: 0.2559|train_asd: 13.7220|train_hd95: 35.0714\par
+Val_Epoch:81/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7828 | total_loss: 0.3952: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.77it/s]\par
+Val_Epoch:81/100|val_bce_loss: 0.0233|val_dice_loss: 0.4543| val_total_loss: 0.2388|val_f1: 0.4424|val_asd: 0.0667|val_hd95: 15.5145\par
+Train_Epoch:82/100|iter:126| bce_loss: 0.0201 | dice_loss: 0.5086 | total_loss: 0.2644: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:82/100|train_bce_loss: 0.0163|train_dice_loss: 0.4673|train_total_loss: 0.2418|train_f1: 0.6865|train_asd: 3.5272|train_hd95: 22.5699\par
+Val_Epoch:82/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7910 | total_loss: 0.3993: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.80it/s]\par
+Val_Epoch:82/100|val_bce_loss: 0.0231|val_dice_loss: 0.4574| val_total_loss: 0.2402|val_f1: 0.4259|val_asd: 0.0213|val_hd95: 16.0772\par
+Train_Epoch:83/100|iter:126| bce_loss: 0.0140 | dice_loss: 0.4862 | total_loss: 0.2501: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.08it/s]\par
+Train_Epoch:83/100|train_bce_loss: 0.0164|train_dice_loss: 0.4667|train_total_loss: 0.2415|train_f1: 0.6222|train_asd: 2.7509|train_hd95: 7.2525\par
+Val_Epoch:83/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7947 | total_loss: 0.4013: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:83/100|val_bce_loss: 0.0233|val_dice_loss: 0.4629| val_total_loss: 0.2431|val_f1: 0.4259|val_asd: 0.0213|val_hd95: 16.0772\par
+Train_Epoch:84/100|iter:126| bce_loss: 0.0196 | dice_loss: 0.4310 | total_loss: 0.2253: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:84/100|train_bce_loss: 0.0162|train_dice_loss: 0.4649|train_total_loss: 0.2406|train_f1: 0.7854|train_asd: 0.9069|train_hd95: 8.6197\par
+Val_Epoch:84/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7927 | total_loss: 0.4002: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.88it/s]\par
+Val_Epoch:84/100|val_bce_loss: 0.0230|val_dice_loss: 0.4579| val_total_loss: 0.2405|val_f1: 0.4176|val_asd: 0.0323|val_hd95: 15.9374\par
+Train_Epoch:85/100|iter:126| bce_loss: 0.0103 | dice_loss: 0.4871 | total_loss: 0.2487: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:85/100|train_bce_loss: 0.0163|train_dice_loss: 0.4669|train_total_loss: 0.2416|train_f1: 0.7313|train_asd: 6.6923|train_hd95: 34.1255\par
+Val_Epoch:85/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7874 | total_loss: 0.3976: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.85it/s]\par
+Val_Epoch:85/100|val_bce_loss: 0.0232|val_dice_loss: 0.4550| val_total_loss: 0.2391|val_f1: 0.4384|val_asd: 0.0400|val_hd95: 15.9374\par
+Train_Epoch:86/100|iter:126| bce_loss: 0.0228 | dice_loss: 0.5195 | total_loss: 0.2711: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.08it/s]\par
+Train_Epoch:86/100|train_bce_loss: 0.0163|train_dice_loss: 0.4650|train_total_loss: 0.2406|train_f1: 0.6450|train_asd: 0.4672|train_hd95: 10.4403\par
+Val_Epoch:86/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7848 | total_loss: 0.3963: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.82it/s]\par
+Val_Epoch:86/100|val_bce_loss: 0.0233|val_dice_loss: 0.4540| val_total_loss: 0.2386|val_f1: 0.4515|val_asd: 0.0476|val_hd95: 15.7891\par
+Train_Epoch:87/100|iter:126| bce_loss: 0.0295 | dice_loss: 0.5580 | total_loss: 0.2938: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:87/100|train_bce_loss: 0.0162|train_dice_loss: 0.4649|train_total_loss: 0.2406|train_f1: 0.3678|train_asd: 13.0794|train_hd95: 49.4080\par
+Val_Epoch:87/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7964 | total_loss: 0.4021: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.87it/s]\par
+Val_Epoch:87/100|val_bce_loss: 0.0230|val_dice_loss: 0.4627| val_total_loss: 0.2429|val_f1: 0.4186|val_asd: 0.0217|val_hd95: 16.1083\par
+Train_Epoch:88/100|iter:126| bce_loss: 0.0098 | dice_loss: 0.3704 | total_loss: 0.1901: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:88/100|train_bce_loss: 0.0163|train_dice_loss: 0.4657|train_total_loss: 0.2410|train_f1: 0.7349|train_asd: 0.4347|train_hd95: 3.6056\par
+Val_Epoch:88/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7834 | total_loss: 0.3957: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:16<00:00,  1.89it/s]\par
+Val_Epoch:88/100|val_bce_loss: 0.0233|val_dice_loss: 0.4567| val_total_loss: 0.2400|val_f1: 0.4389|val_asd: 0.0673|val_hd95: 15.5193\par
+Train_Epoch:89/100|iter:126| bce_loss: 0.0103 | dice_loss: 0.3437 | total_loss: 0.1770: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.07it/s]\par
+Train_Epoch:89/100|train_bce_loss: 0.0162|train_dice_loss: 0.4641|train_total_loss: 0.2402|train_f1: 0.7917|train_asd: 0.7218|train_hd95: 3.0000\par
+Val_Epoch:89/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7896 | total_loss: 0.3987: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.87it/s]\par
+Val_Epoch:89/100|val_bce_loss: 0.0232|val_dice_loss: 0.4565| val_total_loss: 0.2399|val_f1: 0.4312|val_asd: 0.0408|val_hd95: 15.9374\par
+Train_Epoch:90/100|iter:126| bce_loss: 0.0084 | dice_loss: 0.5583 | total_loss: 0.2833: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:57<00:00,  1.07it/s]\par
+Train_Epoch:90/100|train_bce_loss: 0.0164|train_dice_loss: 0.4662|train_total_loss: 0.2413|train_f1: 0.5819|train_asd: 25.3442|train_hd95: 86.5748\par
+Val_Epoch:90/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7940 | total_loss: 0.4009: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.86it/s]\par
+Val_Epoch:90/100|val_bce_loss: 0.0233|val_dice_loss: 0.4592| val_total_loss: 0.2412|val_f1: 0.4149|val_asd: 0.0220|val_hd95: 16.1238\par
+Train_Epoch:91/100|iter:126| bce_loss: 0.0154 | dice_loss: 0.3853 | total_loss: 0.2004: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:56<00:00,  1.08it/s]\par
+Train_Epoch:91/100|train_bce_loss: 0.0163|train_dice_loss: 0.4657|train_total_loss: 0.2410|train_f1: 0.7868|train_asd: 0.3349|train_hd95: 4.9208\par
+Val_Epoch:91/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7866 | total_loss: 0.3972: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.74it/s]\par
+Val_Epoch:91/100|val_bce_loss: 0.0233|val_dice_loss: 0.4563| val_total_loss: 0.2398|val_f1: 0.4419|val_asd: 0.0396|val_hd95: 15.8240\par
+Train_Epoch:92/100|iter:126| bce_loss: 0.0182 | dice_loss: 0.5773 | total_loss: 0.2977: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [02:01<00:00,  1.04it/s]\par
+Train_Epoch:92/100|train_bce_loss: 0.0163|train_dice_loss: 0.4661|train_total_loss: 0.2412|train_f1: 0.4093|train_asd: 15.2459|train_hd95: 49.7091\par
+Val_Epoch:92/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7903 | total_loss: 0.3990: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.76it/s]\par
+Val_Epoch:92/100|val_bce_loss: 0.0232|val_dice_loss: 0.4567| val_total_loss: 0.2400|val_f1: 0.4286|val_asd: 0.0312|val_hd95: 15.9374\par
+Train_Epoch:93/100|iter:126| bce_loss: 0.0124 | dice_loss: 0.3174 | total_loss: 0.1649: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [02:00<00:00,  1.04it/s]\par
+Train_Epoch:93/100|train_bce_loss: 0.0163|train_dice_loss: 0.4660|train_total_loss: 0.2411|train_f1: 0.8183|train_asd: 3.0078|train_hd95: 3.1623\par
+Val_Epoch:93/100|iter:32| bce_loss: 0.0081 | dice_loss: 0.7982 | total_loss: 0.4031: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.79it/s]\par
+Val_Epoch:93/100|val_bce_loss: 0.0230|val_dice_loss: 0.4579| val_total_loss: 0.2405|val_f1: 0.4203|val_asd: 0.0421|val_hd95: 15.9374\par
+Train_Epoch:94/100|iter:126| bce_loss: 0.0317 | dice_loss: 0.6395 | total_loss: 0.3356: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:59<00:00,  1.05it/s]\par
+Train_Epoch:94/100|train_bce_loss: 0.0164|train_dice_loss: 0.4663|train_total_loss: 0.2414|train_f1: 0.2419|train_asd: 21.9168|train_hd95: 65.2353\par
+Val_Epoch:94/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7907 | total_loss: 0.3992: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.77it/s]\par
+Val_Epoch:94/100|val_bce_loss: 0.0233|val_dice_loss: 0.4617| val_total_loss: 0.2425|val_f1: 0.4404|val_asd: 0.0204|val_hd95: 16.0151\par
+Train_Epoch:95/100|iter:126| bce_loss: 0.0274 | dice_loss: 0.4149 | total_loss: 0.2212: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [02:00<00:00,  1.05it/s]\par
+Train_Epoch:95/100|train_bce_loss: 0.0163|train_dice_loss: 0.4659|train_total_loss: 0.2411|train_f1: 0.5567|train_asd: 3.1561|train_hd95: 10.0499\par
+Val_Epoch:95/100|iter:32| bce_loss: 0.0077 | dice_loss: 0.7912 | total_loss: 0.3995: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.76it/s]\par
+Val_Epoch:95/100|val_bce_loss: 0.0231|val_dice_loss: 0.4587| val_total_loss: 0.2409|val_f1: 0.4286|val_asd: 0.0312|val_hd95: 16.0461\par
+Train_Epoch:96/100|iter:126| bce_loss: 0.0153 | dice_loss: 0.4670 | total_loss: 0.2411: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [02:01<00:00,  1.03it/s]\par
+Train_Epoch:96/100|train_bce_loss: 0.0163|train_dice_loss: 0.4651|train_total_loss: 0.2407|train_f1: 0.6011|train_asd: 7.4778|train_hd95: 30.6129\par
+Val_Epoch:96/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7902 | total_loss: 0.3990: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:18<00:00,  1.76it/s]\par
+Val_Epoch:96/100|val_bce_loss: 0.0233|val_dice_loss: 0.4575| val_total_loss: 0.2404|val_f1: 0.4213|val_asd: 0.0319|val_hd95: 16.0772\par
+Train_Epoch:97/100|iter:126| bce_loss: 0.0091 | dice_loss: 0.5012 | total_loss: 0.2551: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [02:00<00:00,  1.05it/s]\par
+Train_Epoch:97/100|train_bce_loss: 0.0162|train_dice_loss: 0.4654|train_total_loss: 0.2408|train_f1: 0.7488|train_asd: 2.4783|train_hd95: 5.3852\par
+Val_Epoch:97/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7930 | total_loss: 0.4004: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.79it/s]\par
+Val_Epoch:97/100|val_bce_loss: 0.0232|val_dice_loss: 0.4575| val_total_loss: 0.2403|val_f1: 0.4103|val_asd: 0.0330|val_hd95: 16.1238\par
+Train_Epoch:98/100|iter:126| bce_loss: 0.0099 | dice_loss: 0.3208 | total_loss: 0.1654: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [02:01<00:00,  1.04it/s]\par
+Train_Epoch:98/100|train_bce_loss: 0.0162|train_dice_loss: 0.4651|train_total_loss: 0.2407|train_f1: 0.8266|train_asd: 1.7674|train_hd95: 3.6056\par
+Val_Epoch:98/100|iter:32| bce_loss: 0.0078 | dice_loss: 0.7948 | total_loss: 0.4013: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.80it/s]\par
+Val_Epoch:98/100|val_bce_loss: 0.0231|val_dice_loss: 0.4586| val_total_loss: 0.2408|val_f1: 0.4075|val_asd: 0.0225|val_hd95: 16.1549\par
+Train_Epoch:99/100|iter:126| bce_loss: 0.0166 | dice_loss: 0.4922 | total_loss: 0.2544: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:99/100|train_bce_loss: 0.0162|train_dice_loss: 0.4657|train_total_loss: 0.2410|train_f1: 0.4583|train_asd: 19.2364|train_hd95: 55.4608\par
+Val_Epoch:99/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7893 | total_loss: 0.3986: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.85it/s]\par
+Val_Epoch:99/100|val_bce_loss: 0.0231|val_dice_loss: 0.4563| val_total_loss: 0.2397|val_f1: 0.4348|val_asd: 0.0404|val_hd95: 15.8366\par
+Train_Epoch:100/100|iter:126| bce_loss: 0.0166 | dice_loss: 0.4020 | total_loss: 0.2093: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 126/126 [01:58<00:00,  1.06it/s]\par
+Train_Epoch:100/100|train_bce_loss: 0.0165|train_dice_loss: 0.4673|train_total_loss: 0.2419|train_f1: 0.6237|train_asd: 1.9428|train_hd95: 15.2971\par
+Val_Epoch:100/100|iter:32| bce_loss: 0.0079 | dice_loss: 0.7835 | total_loss: 0.3957: 100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:17<00:00,  1.79it/s]\par
+Val_Epoch:100/100|val_bce_loss: 0.0232|val_dice_loss: 0.4566| val_total_loss: 0.2399|val_f1: 0.4308|val_asd: 0.0777|val_hd95: 15.5242\par
+Last model is saved!\par
+Loss and metrics are saved!\par
+100%|\f1\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\f0 | 32/32 [00:09<00:00,  3.30it/s]Predictions are saved!\par
+}
+ 
