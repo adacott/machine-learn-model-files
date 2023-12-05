@@ -1,0 +1,506 @@
+Train_Epoch:1/100|iter:63| bce_loss: 0.2863 | dice_loss: 0.9840 | total_loss: 0.6352: 100%|██████████| 63/63 [01:11<00:00,  1.14s/it]
+Train_Epoch:1/100|train_bce_loss: 0.3019|train_dice_loss: 0.9837|train_total_loss: 0.6428|train_f1: 0.2339|train_asd: 7.9317|train_hd95: 26.1534
+Val_Epoch:1/100|iter:16| bce_loss: 0.2726 | dice_loss: 0.9973 | total_loss: 0.6350: 100%|██████████| 16/16 [00:09<00:00,  1.60it/s]
+Val_Epoch:1/100|val_bce_loss: 0.2883|val_dice_loss: 0.9749| val_total_loss: 0.6316|val_f1: 0.1170|val_asd: 28.1361|val_hd95: 71.9911
+Best val loss: 0.6316 is saved!
+Best train loss: 0.6428 is saved!
+Train_Epoch:2/100|iter:63| bce_loss: 0.2624 | dice_loss: 0.9845 | total_loss: 0.6235: 100%|██████████| 63/63 [01:12<00:00,  1.15s/it]
+Train_Epoch:2/100|train_bce_loss: 0.2676|train_dice_loss: 0.9753|train_total_loss: 0.6215|train_f1: 0.2176|train_asd: 11.1978|train_hd95: 30.0832
+Val_Epoch:2/100|iter:16| bce_loss: 0.2450 | dice_loss: 0.9956 | total_loss: 0.6203: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:2/100|val_bce_loss: 0.2730|val_dice_loss: 0.9663| val_total_loss: 0.6197|val_f1: 0.1943|val_asd: 39.5028|val_hd95: 75.7516
+Best val loss: 0.6197 is saved!
+Best train loss: 0.6215 is saved!
+Train_Epoch:3/100|iter:63| bce_loss: 0.2371 | dice_loss: 0.9665 | total_loss: 0.6018: 100%|██████████| 63/63 [01:12<00:00,  1.15s/it]
+Train_Epoch:3/100|train_bce_loss: 0.2408|train_dice_loss: 0.9717|train_total_loss: 0.6062|train_f1: 0.3254|train_asd: 7.8405|train_hd95: 23.0217
+Val_Epoch:3/100|iter:16| bce_loss: 0.2198 | dice_loss: 0.9953 | total_loss: 0.6075: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:3/100|val_bce_loss: 0.2330|val_dice_loss: 0.9614| val_total_loss: 0.5972|val_f1: 0.2599|val_asd: 20.6538|val_hd95: 42.2410
+Best val loss: 0.5972 is saved!
+Best train loss: 0.6062 is saved!
+Train_Epoch:4/100|iter:63| bce_loss: 0.2074 | dice_loss: 0.9726 | total_loss: 0.5900: 100%|██████████| 63/63 [01:11<00:00,  1.14s/it]
+Train_Epoch:4/100|train_bce_loss: 0.2150|train_dice_loss: 0.9662|train_total_loss: 0.5906|train_f1: 0.4215|train_asd: 5.9815|train_hd95: 27.2121
+Val_Epoch:4/100|iter:16| bce_loss: 0.1947 | dice_loss: 0.9937 | total_loss: 0.5942: 100%|██████████| 16/16 [00:09<00:00,  1.62it/s]
+Val_Epoch:4/100|val_bce_loss: 0.2052|val_dice_loss: 0.9560| val_total_loss: 0.5806|val_f1: 0.3961|val_asd: 17.5018|val_hd95: 42.9697
+Best val loss: 0.5806 is saved!
+Best train loss: 0.5906 is saved!
+Train_Epoch:5/100|iter:63| bce_loss: 0.1912 | dice_loss: 0.9648 | total_loss: 0.5780: 100%|██████████| 63/63 [01:12<00:00,  1.14s/it]
+Train_Epoch:5/100|train_bce_loss: 0.1911|train_dice_loss: 0.9605|train_total_loss: 0.5758|train_f1: 0.3748|train_asd: 9.7636|train_hd95: 27.6586
+Val_Epoch:5/100|iter:16| bce_loss: 0.1718 | dice_loss: 0.9939 | total_loss: 0.5829: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:5/100|val_bce_loss: 0.1792|val_dice_loss: 0.9567| val_total_loss: 0.5680|val_f1: 0.4384|val_asd: 12.6653|val_hd95: 39.2479
+Best val loss: 0.5680 is saved!
+Best train loss: 0.5758 is saved!
+Train_Epoch:6/100|iter:63| bce_loss: 0.1685 | dice_loss: 0.9772 | total_loss: 0.5729: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:6/100|train_bce_loss: 0.1712|train_dice_loss: 0.9573|train_total_loss: 0.5642|train_f1: 0.2834|train_asd: 10.6102|train_hd95: 40.3596
+Val_Epoch:6/100|iter:16| bce_loss: 0.1500 | dice_loss: 0.9909 | total_loss: 0.5704: 100%|██████████| 16/16 [00:10<00:00,  1.54it/s]
+Val_Epoch:6/100|val_bce_loss: 0.1698|val_dice_loss: 0.9449| val_total_loss: 0.5573|val_f1: 0.3815|val_asd: 18.4604|val_hd95: 43.2597
+Best val loss: 0.5573 is saved!
+Best train loss: 0.5642 is saved!
+Train_Epoch:7/100|iter:63| bce_loss: 0.1458 | dice_loss: 0.9540 | total_loss: 0.5499: 100%|██████████| 63/63 [01:16<00:00,  1.21s/it]
+Train_Epoch:7/100|train_bce_loss: 0.1517|train_dice_loss: 0.9510|train_total_loss: 0.5514|train_f1: 0.5099|train_asd: 12.3176|train_hd95: 44.1475
+Val_Epoch:7/100|iter:16| bce_loss: 0.1331 | dice_loss: 0.9893 | total_loss: 0.5612: 100%|██████████| 16/16 [00:09<00:00,  1.64it/s]
+Val_Epoch:7/100|val_bce_loss: 0.1479|val_dice_loss: 0.9419| val_total_loss: 0.5449|val_f1: 0.4483|val_asd: 13.6158|val_hd95: 39.4433
+Best val loss: 0.5449 is saved!
+Best train loss: 0.5514 is saved!
+Train_Epoch:8/100|iter:63| bce_loss: 0.1263 | dice_loss: 0.9184 | total_loss: 0.5224: 100%|██████████| 63/63 [01:17<00:00,  1.23s/it]
+Train_Epoch:8/100|train_bce_loss: 0.1357|train_dice_loss: 0.9443|train_total_loss: 0.5400|train_f1: 0.7179|train_asd: 1.9167|train_hd95: 5.0990
+Val_Epoch:8/100|iter:16| bce_loss: 0.1196 | dice_loss: 0.9911 | total_loss: 0.5553: 100%|██████████| 16/16 [00:10<00:00,  1.59it/s]
+Val_Epoch:8/100|val_bce_loss: 0.1322|val_dice_loss: 0.9394| val_total_loss: 0.5358|val_f1: 0.3993|val_asd: 17.5426|val_hd95: 41.3038
+Best val loss: 0.5358 is saved!
+Best train loss: 0.5400 is saved!
+Train_Epoch:9/100|iter:63| bce_loss: 0.1149 | dice_loss: 0.9184 | total_loss: 0.5167: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:9/100|train_bce_loss: 0.1217|train_dice_loss: 0.9386|train_total_loss: 0.5302|train_f1: 0.7012|train_asd: 1.9828|train_hd95: 9.2736
+Val_Epoch:9/100|iter:16| bce_loss: 0.1071 | dice_loss: 0.9877 | total_loss: 0.5474: 100%|██████████| 16/16 [00:11<00:00,  1.38it/s]
+Val_Epoch:9/100|val_bce_loss: 0.1192|val_dice_loss: 0.9308| val_total_loss: 0.5250|val_f1: 0.4296|val_asd: 14.4255|val_hd95: 38.6005
+Best val loss: 0.5250 is saved!
+Best train loss: 0.5302 is saved!
+Train_Epoch:10/100|iter:63| bce_loss: 0.1035 | dice_loss: 0.9276 | total_loss: 0.5155: 100%|██████████| 63/63 [01:12<00:00,  1.16s/it]
+Train_Epoch:10/100|train_bce_loss: 0.1090|train_dice_loss: 0.9305|train_total_loss: 0.5197|train_f1: 0.6028|train_asd: 2.8367|train_hd95: 11.0454
+Val_Epoch:10/100|iter:16| bce_loss: 0.1002 | dice_loss: 0.9929 | total_loss: 0.5466: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:10/100|val_bce_loss: 0.1049|val_dice_loss: 0.9282| val_total_loss: 0.5166|val_f1: 0.2575|val_asd: 52.4081|val_hd95: 97.0824
+Best val loss: 0.5166 is saved!
+Best train loss: 0.5197 is saved!
+Train_Epoch:11/100|iter:63| bce_loss: 0.0934 | dice_loss: 0.8632 | total_loss: 0.4783: 100%|██████████| 63/63 [01:12<00:00,  1.15s/it]
+Train_Epoch:11/100|train_bce_loss: 0.0975|train_dice_loss: 0.9230|train_total_loss: 0.5103|train_f1: 0.7078|train_asd: 1.4888|train_hd95: 7.1414
+Val_Epoch:11/100|iter:16| bce_loss: 0.0865 | dice_loss: 0.9869 | total_loss: 0.5367: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:11/100|val_bce_loss: 0.0973|val_dice_loss: 0.9117| val_total_loss: 0.5045|val_f1: 0.4393|val_asd: 17.5879|val_hd95: 42.5435
+Best val loss: 0.5045 is saved!
+Best train loss: 0.5103 is saved!
+Train_Epoch:12/100|iter:63| bce_loss: 0.0841 | dice_loss: 0.9221 | total_loss: 0.5031: 100%|██████████| 63/63 [01:11<00:00,  1.14s/it]
+Train_Epoch:12/100|train_bce_loss: 0.0865|train_dice_loss: 0.9129|train_total_loss: 0.4997|train_f1: 0.5289|train_asd: 4.6456|train_hd95: 23.2271
+Val_Epoch:12/100|iter:16| bce_loss: 0.0756 | dice_loss: 0.9848 | total_loss: 0.5302: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:12/100|val_bce_loss: 0.0900|val_dice_loss: 0.8994| val_total_loss: 0.4947|val_f1: 0.3045|val_asd: 22.4682|val_hd95: 47.0893
+Best val loss: 0.4947 is saved!
+Best train loss: 0.4997 is saved!
+Train_Epoch:13/100|iter:63| bce_loss: 0.0736 | dice_loss: 0.9509 | total_loss: 0.5123: 100%|██████████| 63/63 [01:16<00:00,  1.22s/it]
+Train_Epoch:13/100|train_bce_loss: 0.0766|train_dice_loss: 0.9021|train_total_loss: 0.4894|train_f1: 0.4825|train_asd: 3.1664|train_hd95: 11.8933
+Val_Epoch:13/100|iter:16| bce_loss: 0.0643 | dice_loss: 0.9864 | total_loss: 0.5254: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:13/100|val_bce_loss: 0.0702|val_dice_loss: 0.9030| val_total_loss: 0.4866|val_f1: 0.4923|val_asd: 8.5642|val_hd95: 34.3416
+Best val loss: 0.4866 is saved!
+Best train loss: 0.4894 is saved!
+Train_Epoch:14/100|iter:63| bce_loss: 0.0671 | dice_loss: 0.8883 | total_loss: 0.4777: 100%|██████████| 63/63 [01:14<00:00,  1.18s/it]
+Train_Epoch:14/100|train_bce_loss: 0.0680|train_dice_loss: 0.8922|train_total_loss: 0.4801|train_f1: 0.5504|train_asd: 4.1400|train_hd95: 18.3956
+Val_Epoch:14/100|iter:16| bce_loss: 0.0745 | dice_loss: 0.9683 | total_loss: 0.5214: 100%|██████████| 16/16 [00:10<00:00,  1.54it/s]
+Val_Epoch:14/100|val_bce_loss: 0.0926|val_dice_loss: 0.8798| val_total_loss: 0.4862|val_f1: 0.1631|val_asd: 29.0110|val_hd95: 64.8999
+Best val loss: 0.4862 is saved!
+Best train loss: 0.4801 is saved!
+Train_Epoch:15/100|iter:63| bce_loss: 0.0559 | dice_loss: 0.9137 | total_loss: 0.4848: 100%|██████████| 63/63 [01:15<00:00,  1.19s/it]
+Train_Epoch:15/100|train_bce_loss: 0.0610|train_dice_loss: 0.8816|train_total_loss: 0.4713|train_f1: 0.5933|train_asd: 2.5923|train_hd95: 12.6886
+Val_Epoch:15/100|iter:16| bce_loss: 0.0517 | dice_loss: 0.9705 | total_loss: 0.5111: 100%|██████████| 16/16 [00:10<00:00,  1.59it/s]
+Val_Epoch:15/100|val_bce_loss: 0.0675|val_dice_loss: 0.8814| val_total_loss: 0.4745|val_f1: 0.3467|val_asd: 18.0870|val_hd95: 46.5553
+Best val loss: 0.4745 is saved!
+Best train loss: 0.4713 is saved!
+Train_Epoch:16/100|iter:63| bce_loss: 0.0521 | dice_loss: 0.8401 | total_loss: 0.4461: 100%|██████████| 63/63 [01:14<00:00,  1.19s/it]
+Train_Epoch:16/100|train_bce_loss: 0.0535|train_dice_loss: 0.8652|train_total_loss: 0.4593|train_f1: 0.6221|train_asd: 3.2956|train_hd95: 17.4929
+Val_Epoch:16/100|iter:16| bce_loss: 0.0436 | dice_loss: 0.9706 | total_loss: 0.5071: 100%|██████████| 16/16 [00:10<00:00,  1.58it/s]
+Val_Epoch:16/100|val_bce_loss: 0.0607|val_dice_loss: 0.8535| val_total_loss: 0.4571|val_f1: 0.4504|val_asd: 15.3853|val_hd95: 41.1947
+Best val loss: 0.4571 is saved!
+Best train loss: 0.4593 is saved!
+Train_Epoch:17/100|iter:63| bce_loss: 0.0516 | dice_loss: 0.9032 | total_loss: 0.4774: 100%|██████████| 63/63 [01:14<00:00,  1.18s/it]
+Train_Epoch:17/100|train_bce_loss: 0.0474|train_dice_loss: 0.8483|train_total_loss: 0.4478|train_f1: 0.4039|train_asd: 5.8038|train_hd95: 19.9249
+Val_Epoch:17/100|iter:16| bce_loss: 0.0396 | dice_loss: 0.9773 | total_loss: 0.5084: 100%|██████████| 16/16 [00:09<00:00,  1.61it/s]
+Val_Epoch:17/100|val_bce_loss: 0.0510|val_dice_loss: 0.8489| val_total_loss: 0.4500|val_f1: 0.4714|val_asd: 11.6530|val_hd95: 39.8967
+Best val loss: 0.4500 is saved!
+Best train loss: 0.4478 is saved!
+Train_Epoch:18/100|iter:63| bce_loss: 0.0377 | dice_loss: 0.8079 | total_loss: 0.4228: 100%|██████████| 63/63 [01:14<00:00,  1.18s/it]
+Train_Epoch:18/100|train_bce_loss: 0.0415|train_dice_loss: 0.8306|train_total_loss: 0.4360|train_f1: 0.7385|train_asd: 1.3849|train_hd95: 4.2426
+Val_Epoch:18/100|iter:16| bce_loss: 0.0359 | dice_loss: 0.9439 | total_loss: 0.4899: 100%|██████████| 16/16 [00:10<00:00,  1.54it/s]
+Val_Epoch:18/100|val_bce_loss: 0.0491|val_dice_loss: 0.8242| val_total_loss: 0.4366|val_f1: 0.3821|val_asd: 14.6168|val_hd95: 44.4837
+Best val loss: 0.4366 is saved!
+Best train loss: 0.4360 is saved!
+Train_Epoch:19/100|iter:63| bce_loss: 0.0385 | dice_loss: 0.9203 | total_loss: 0.4794: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:19/100|train_bce_loss: 0.0363|train_dice_loss: 0.8088|train_total_loss: 0.4226|train_f1: 0.3320|train_asd: 14.9575|train_hd95: 57.3585
+Val_Epoch:19/100|iter:16| bce_loss: 0.0293 | dice_loss: 0.9343 | total_loss: 0.4818: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:19/100|val_bce_loss: 0.0449|val_dice_loss: 0.7999| val_total_loss: 0.4224|val_f1: 0.4387|val_asd: 20.1379|val_hd95: 63.3119
+Best val loss: 0.4224 is saved!
+Best train loss: 0.4226 is saved!
+Train_Epoch:20/100|iter:63| bce_loss: 0.0262 | dice_loss: 0.8413 | total_loss: 0.4337: 100%|██████████| 63/63 [01:12<00:00,  1.16s/it]
+Train_Epoch:20/100|train_bce_loss: 0.0317|train_dice_loss: 0.7853|train_total_loss: 0.4085|train_f1: 0.6998|train_asd: 2.8489|train_hd95: 5.0000
+Val_Epoch:20/100|iter:16| bce_loss: 0.0220 | dice_loss: 0.9598 | total_loss: 0.4909: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:20/100|val_bce_loss: 0.0307|val_dice_loss: 0.7996| val_total_loss: 0.4152|val_f1: 0.5182|val_asd: 8.7237|val_hd95: 37.2799
+Best val loss: 0.4152 is saved!
+Best train loss: 0.4085 is saved!
+Train_Epoch:21/100|iter:63| bce_loss: 0.0286 | dice_loss: 0.7609 | total_loss: 0.3948: 100%|██████████| 63/63 [01:14<00:00,  1.18s/it]
+Train_Epoch:21/100|train_bce_loss: 0.0279|train_dice_loss: 0.7574|train_total_loss: 0.3927|train_f1: 0.7044|train_asd: 2.4979|train_hd95: 11.5823
+Val_Epoch:21/100|iter:16| bce_loss: 0.0228 | dice_loss: 0.9145 | total_loss: 0.4686: 100%|██████████| 16/16 [00:10<00:00,  1.59it/s]
+Val_Epoch:21/100|val_bce_loss: 0.0340|val_dice_loss: 0.7520| val_total_loss: 0.3930|val_f1: 0.4467|val_asd: 16.7183|val_hd95: 61.5378
+Best val loss: 0.3930 is saved!
+Best train loss: 0.3927 is saved!
+Train_Epoch:22/100|iter:63| bce_loss: 0.0207 | dice_loss: 0.8010 | total_loss: 0.4108: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:22/100|train_bce_loss: 0.0249|train_dice_loss: 0.7268|train_total_loss: 0.3759|train_f1: 0.6388|train_asd: 6.6624|train_hd95: 30.0998
+Val_Epoch:22/100|iter:16| bce_loss: 0.0180 | dice_loss: 0.8841 | total_loss: 0.4511: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:22/100|val_bce_loss: 0.0283|val_dice_loss: 0.7237| val_total_loss: 0.3760|val_f1: 0.4235|val_asd: 20.0264|val_hd95: 44.2583
+Best val loss: 0.3760 is saved!
+Best train loss: 0.3759 is saved!
+Train_Epoch:23/100|iter:63| bce_loss: 0.0194 | dice_loss: 0.6479 | total_loss: 0.3336: 100%|██████████| 63/63 [01:14<00:00,  1.19s/it]
+Train_Epoch:23/100|train_bce_loss: 0.0224|train_dice_loss: 0.6999|train_total_loss: 0.3612|train_f1: 0.7281|train_asd: 1.3686|train_hd95: 6.3246
+Val_Epoch:23/100|iter:16| bce_loss: 0.0131 | dice_loss: 0.9126 | total_loss: 0.4629: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:23/100|val_bce_loss: 0.0262|val_dice_loss: 0.7065| val_total_loss: 0.3664|val_f1: 0.5616|val_asd: 11.8458|val_hd95: 38.0951
+Best val loss: 0.3664 is saved!
+Best train loss: 0.3612 is saved!
+Train_Epoch:24/100|iter:63| bce_loss: 0.0164 | dice_loss: 0.7121 | total_loss: 0.3643: 100%|██████████| 63/63 [01:14<00:00,  1.18s/it]
+Train_Epoch:24/100|train_bce_loss: 0.0195|train_dice_loss: 0.6610|train_total_loss: 0.3402|train_f1: 0.7282|train_asd: 0.4492|train_hd95: 25.0849
+Val_Epoch:24/100|iter:16| bce_loss: 0.0100 | dice_loss: 0.9203 | total_loss: 0.4651: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:24/100|val_bce_loss: 0.0241|val_dice_loss: 0.6787| val_total_loss: 0.3514|val_f1: 0.4845|val_asd: 1.5834|val_hd95: 4.1231
+Best val loss: 0.3514 is saved!
+Best train loss: 0.3402 is saved!
+Train_Epoch:25/100|iter:63| bce_loss: 0.0180 | dice_loss: 0.5108 | total_loss: 0.2644: 100%|██████████| 63/63 [01:12<00:00,  1.15s/it]
+Train_Epoch:25/100|train_bce_loss: 0.0176|train_dice_loss: 0.6310|train_total_loss: 0.3243|train_f1: 0.7951|train_asd: 0.3803|train_hd95: 2.2361
+Val_Epoch:25/100|iter:16| bce_loss: 0.0095 | dice_loss: 0.8952 | total_loss: 0.4523: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:25/100|val_bce_loss: 0.0225|val_dice_loss: 0.6995| val_total_loss: 0.3610|val_f1: 0.5457|val_asd: 7.3200|val_hd95: 34.3802
+Best train loss: 0.3243 is saved!
+Train_Epoch:26/100|iter:63| bce_loss: 0.0146 | dice_loss: 0.6007 | total_loss: 0.3077: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:26/100|train_bce_loss: 0.0163|train_dice_loss: 0.5972|train_total_loss: 0.3068|train_f1: 0.7141|train_asd: 1.7160|train_hd95: 6.7823
+Val_Epoch:26/100|iter:16| bce_loss: 0.0083 | dice_loss: 0.8766 | total_loss: 0.4424: 100%|██████████| 16/16 [00:09<00:00,  1.66it/s]
+Val_Epoch:26/100|val_bce_loss: 0.0211|val_dice_loss: 0.6359| val_total_loss: 0.3285|val_f1: 0.5355|val_asd: 2.7080|val_hd95: 5.3566
+Best val loss: 0.3285 is saved!
+Best train loss: 0.3068 is saved!
+Train_Epoch:27/100|iter:63| bce_loss: 0.0202 | dice_loss: 0.4298 | total_loss: 0.2250: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:27/100|train_bce_loss: 0.0153|train_dice_loss: 0.5745|train_total_loss: 0.2949|train_f1: 0.7959|train_asd: 0.1013|train_hd95: 6.1113
+Val_Epoch:27/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.9212 | total_loss: 0.4647: 100%|██████████| 16/16 [00:09<00:00,  1.61it/s]
+Val_Epoch:27/100|val_bce_loss: 0.0220|val_dice_loss: 0.6221| val_total_loss: 0.3221|val_f1: 0.3391|val_asd: 20.0000|val_hd95: 69.9249
+Best val loss: 0.3221 is saved!
+Best train loss: 0.2949 is saved!
+Train_Epoch:28/100|iter:63| bce_loss: 0.0101 | dice_loss: 0.3561 | total_loss: 0.1831: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:28/100|train_bce_loss: 0.0142|train_dice_loss: 0.5380|train_total_loss: 0.2761|train_f1: 0.8599|train_asd: 0.3332|train_hd95: 1.4142
+Val_Epoch:28/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.9461 | total_loss: 0.4771: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:28/100|val_bce_loss: 0.0211|val_dice_loss: 0.6550| val_total_loss: 0.3380|val_f1: 0.2028|val_asd: 3.0793|val_hd95: 9.8412
+Best train loss: 0.2761 is saved!
+Train_Epoch:29/100|iter:63| bce_loss: 0.0143 | dice_loss: 0.4652 | total_loss: 0.2398: 100%|██████████| 63/63 [01:12<00:00,  1.15s/it]
+Train_Epoch:29/100|train_bce_loss: 0.0130|train_dice_loss: 0.5106|train_total_loss: 0.2618|train_f1: 0.7575|train_asd: 2.1384|train_hd95: 8.8119
+Val_Epoch:29/100|iter:16| bce_loss: 0.0075 | dice_loss: 0.9132 | total_loss: 0.4604: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:29/100|val_bce_loss: 0.0212|val_dice_loss: 0.6067| val_total_loss: 0.3139|val_f1: 0.3290|val_asd: 0.6578|val_hd95: 24.1868
+Best val loss: 0.3139 is saved!
+Best train loss: 0.2618 is saved!
+Train_Epoch:30/100|iter:63| bce_loss: 0.0080 | dice_loss: 0.4886 | total_loss: 0.2483: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:30/100|train_bce_loss: 0.0124|train_dice_loss: 0.4884|train_total_loss: 0.2504|train_f1: 0.8255|train_asd: 0.5736|train_hd95: 2.0000
+Val_Epoch:30/100|iter:16| bce_loss: 0.0074 | dice_loss: 0.8082 | total_loss: 0.4078: 100%|██████████| 16/16 [00:09<00:00,  1.66it/s]
+Val_Epoch:30/100|val_bce_loss: 0.0203|val_dice_loss: 0.5629| val_total_loss: 0.2916|val_f1: 0.4617|val_asd: 15.9984|val_hd95: 39.2607
+Best val loss: 0.2916 is saved!
+Best train loss: 0.2504 is saved!
+Train_Epoch:31/100|iter:63| bce_loss: 0.0151 | dice_loss: 0.4013 | total_loss: 0.2082: 100%|██████████| 63/63 [01:11<00:00,  1.14s/it]
+Train_Epoch:31/100|train_bce_loss: 0.0114|train_dice_loss: 0.4544|train_total_loss: 0.2329|train_f1: 0.7639|train_asd: 0.6336|train_hd95: 3.0000
+Val_Epoch:31/100|iter:16| bce_loss: 0.0068 | dice_loss: 0.8860 | total_loss: 0.4464: 100%|██████████| 16/16 [00:09<00:00,  1.75it/s]
+Val_Epoch:31/100|val_bce_loss: 0.0208|val_dice_loss: 0.5466| val_total_loss: 0.2837|val_f1: 0.3783|val_asd: 2.7371|val_hd95: 8.6603
+Best val loss: 0.2837 is saved!
+Best train loss: 0.2329 is saved!
+Train_Epoch:32/100|iter:63| bce_loss: 0.0195 | dice_loss: 0.3742 | total_loss: 0.1969: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:32/100|train_bce_loss: 0.0116|train_dice_loss: 0.4363|train_total_loss: 0.2240|train_f1: 0.7744|train_asd: 0.1646|train_hd95: 2.2361
+Val_Epoch:32/100|iter:16| bce_loss: 0.0063 | dice_loss: 0.7821 | total_loss: 0.3942: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:32/100|val_bce_loss: 0.0177|val_dice_loss: 0.5174| val_total_loss: 0.2676|val_f1: 0.5028|val_asd: 12.9770|val_hd95: 39.6018
+Best val loss: 0.2676 is saved!
+Best train loss: 0.2240 is saved!
+Train_Epoch:33/100|iter:63| bce_loss: 0.0168 | dice_loss: 0.4252 | total_loss: 0.2210: 100%|██████████| 63/63 [01:12<00:00,  1.14s/it]
+Train_Epoch:33/100|train_bce_loss: 0.0113|train_dice_loss: 0.4200|train_total_loss: 0.2157|train_f1: 0.7806|train_asd: 0.9195|train_hd95: 6.4031
+Val_Epoch:33/100|iter:16| bce_loss: 0.0068 | dice_loss: 0.7812 | total_loss: 0.3940: 100%|██████████| 16/16 [00:09<00:00,  1.61it/s]
+Val_Epoch:33/100|val_bce_loss: 0.0201|val_dice_loss: 0.5144| val_total_loss: 0.2673|val_f1: 0.4587|val_asd: 20.8801|val_hd95: 58.1631
+Best val loss: 0.2673 is saved!
+Best train loss: 0.2157 is saved!
+Train_Epoch:34/100|iter:63| bce_loss: 0.0106 | dice_loss: 0.4326 | total_loss: 0.2216: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:34/100|train_bce_loss: 0.0107|train_dice_loss: 0.3998|train_total_loss: 0.2052|train_f1: 0.7636|train_asd: 1.4902|train_hd95: 5.0000
+Val_Epoch:34/100|iter:16| bce_loss: 0.0078 | dice_loss: 0.8815 | total_loss: 0.4446: 100%|██████████| 16/16 [00:09<00:00,  1.65it/s]
+Val_Epoch:34/100|val_bce_loss: 0.0229|val_dice_loss: 0.5669| val_total_loss: 0.2949|val_f1: 0.2695|val_asd: 15.3480|val_hd95: 31.6637
+Best train loss: 0.2052 is saved!
+Train_Epoch:35/100|iter:63| bce_loss: 0.0111 | dice_loss: 0.3021 | total_loss: 0.1566: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:35/100|train_bce_loss: 0.0106|train_dice_loss: 0.3883|train_total_loss: 0.1995|train_f1: 0.7722|train_asd: 0.6013|train_hd95: 2.2361
+Val_Epoch:35/100|iter:16| bce_loss: 0.0057 | dice_loss: 0.7135 | total_loss: 0.3596: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:35/100|val_bce_loss: 0.0223|val_dice_loss: 0.5056| val_total_loss: 0.2640|val_f1: 0.5386|val_asd: 11.1057|val_hd95: 38.7588
+Best val loss: 0.2640 is saved!
+Best train loss: 0.1995 is saved!
+Train_Epoch:36/100|iter:63| bce_loss: 0.0120 | dice_loss: 0.4351 | total_loss: 0.2236: 100%|██████████| 63/63 [01:11<00:00,  1.14s/it]
+Train_Epoch:36/100|train_bce_loss: 0.0113|train_dice_loss: 0.3914|train_total_loss: 0.2014|train_f1: 0.6713|train_asd: 3.1351|train_hd95: 12.3693
+Val_Epoch:36/100|iter:16| bce_loss: 0.0057 | dice_loss: 0.6682 | total_loss: 0.3369: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:36/100|val_bce_loss: 0.0263|val_dice_loss: 0.5803| val_total_loss: 0.3033|val_f1: 0.5116|val_asd: 11.9796|val_hd95: 56.5774
+Train_Epoch:37/100|iter:63| bce_loss: 0.0087 | dice_loss: 0.3427 | total_loss: 0.1757: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:37/100|train_bce_loss: 0.0108|train_dice_loss: 0.3720|train_total_loss: 0.1914|train_f1: 0.8638|train_asd: 0.9883|train_hd95: 1.4142
+Val_Epoch:37/100|iter:16| bce_loss: 0.0060 | dice_loss: 0.7330 | total_loss: 0.3695: 100%|██████████| 16/16 [00:09<00:00,  1.60it/s]
+Val_Epoch:37/100|val_bce_loss: 0.0209|val_dice_loss: 0.4789| val_total_loss: 0.2499|val_f1: 0.5025|val_asd: 8.8371|val_hd95: 38.6348
+Best val loss: 0.2499 is saved!
+Best train loss: 0.1914 is saved!
+Train_Epoch:38/100|iter:63| bce_loss: 0.0103 | dice_loss: 0.3808 | total_loss: 0.1956: 100%|██████████| 63/63 [01:12<00:00,  1.16s/it]
+Train_Epoch:38/100|train_bce_loss: 0.0102|train_dice_loss: 0.3477|train_total_loss: 0.1790|train_f1: 0.7408|train_asd: 0.5816|train_hd95: 2.2361
+Val_Epoch:38/100|iter:16| bce_loss: 0.0057 | dice_loss: 0.7430 | total_loss: 0.3744: 100%|██████████| 16/16 [00:10<00:00,  1.58it/s]
+Val_Epoch:38/100|val_bce_loss: 0.0220|val_dice_loss: 0.5141| val_total_loss: 0.2681|val_f1: 0.4492|val_asd: 0.3088|val_hd95: 4.6142
+Best train loss: 0.1790 is saved!
+Train_Epoch:39/100|iter:63| bce_loss: 0.0137 | dice_loss: 0.3303 | total_loss: 0.1720: 100%|██████████| 63/63 [01:12<00:00,  1.15s/it]
+Train_Epoch:39/100|train_bce_loss: 0.0104|train_dice_loss: 0.3359|train_total_loss: 0.1731|train_f1: 0.8054|train_asd: 0.1401|train_hd95: 2.0000
+Val_Epoch:39/100|iter:16| bce_loss: 0.0062 | dice_loss: 0.7619 | total_loss: 0.3841: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:39/100|val_bce_loss: 0.0218|val_dice_loss: 0.5011| val_total_loss: 0.2615|val_f1: 0.4035|val_asd: 6.4413|val_hd95: 7.0781
+Best train loss: 0.1731 is saved!
+Train_Epoch:40/100|iter:63| bce_loss: 0.0091 | dice_loss: 0.2746 | total_loss: 0.1419: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:40/100|train_bce_loss: 0.0096|train_dice_loss: 0.3197|train_total_loss: 0.1646|train_f1: 0.8597|train_asd: 0.3162|train_hd95: 1.4142
+Val_Epoch:40/100|iter:16| bce_loss: 0.0066 | dice_loss: 0.7644 | total_loss: 0.3855: 100%|██████████| 16/16 [00:10<00:00,  1.58it/s]
+Val_Epoch:40/100|val_bce_loss: 0.0225|val_dice_loss: 0.4742| val_total_loss: 0.2484|val_f1: 0.4141|val_asd: 6.3350|val_hd95: 8.6603
+Best val loss: 0.2484 is saved!
+Best train loss: 0.1646 is saved!
+Train_Epoch:41/100|iter:63| bce_loss: 0.0141 | dice_loss: 0.3032 | total_loss: 0.1586: 100%|██████████| 63/63 [01:15<00:00,  1.19s/it]
+Train_Epoch:41/100|train_bce_loss: 0.0120|train_dice_loss: 0.3500|train_total_loss: 0.1810|train_f1: 0.7287|train_asd: 1.0086|train_hd95: 5.6569
+Val_Epoch:41/100|iter:16| bce_loss: 0.0068 | dice_loss: 0.7899 | total_loss: 0.3983: 100%|██████████| 16/16 [00:09<00:00,  1.64it/s]
+Val_Epoch:41/100|val_bce_loss: 0.0226|val_dice_loss: 0.5134| val_total_loss: 0.2680|val_f1: 0.3852|val_asd: 6.3086|val_hd95: 13.3758
+Train_Epoch:42/100|iter:63| bce_loss: 0.0097 | dice_loss: 0.2949 | total_loss: 0.1523: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:42/100|train_bce_loss: 0.0104|train_dice_loss: 0.3273|train_total_loss: 0.1688|train_f1: 0.8439|train_asd: 0.9208|train_hd95: 3.0000
+Val_Epoch:42/100|iter:16| bce_loss: 0.0067 | dice_loss: 0.7797 | total_loss: 0.3932: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:42/100|val_bce_loss: 0.0214|val_dice_loss: 0.4622| val_total_loss: 0.2418|val_f1: 0.3642|val_asd: 9.8465|val_hd95: 37.1954
+Best val loss: 0.2418 is saved!
+Train_Epoch:43/100|iter:63| bce_loss: 0.0104 | dice_loss: 0.2369 | total_loss: 0.1237: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:43/100|train_bce_loss: 0.0099|train_dice_loss: 0.3052|train_total_loss: 0.1576|train_f1: 0.8075|train_asd: 0.6349|train_hd95: 2.8284
+Val_Epoch:43/100|iter:16| bce_loss: 0.0071 | dice_loss: 0.7772 | total_loss: 0.3922: 100%|██████████| 16/16 [00:10<00:00,  1.58it/s]
+Val_Epoch:43/100|val_bce_loss: 0.0238|val_dice_loss: 0.5025| val_total_loss: 0.2631|val_f1: 0.3279|val_asd: 0.4523|val_hd95: 8.0623
+Best train loss: 0.1576 is saved!
+Train_Epoch:44/100|iter:63| bce_loss: 0.0132 | dice_loss: 0.3548 | total_loss: 0.1840: 100%|██████████| 63/63 [01:16<00:00,  1.21s/it]
+Train_Epoch:44/100|train_bce_loss: 0.0094|train_dice_loss: 0.2926|train_total_loss: 0.1510|train_f1: 0.8297|train_asd: 0.3028|train_hd95: 2.0000
+Val_Epoch:44/100|iter:16| bce_loss: 0.0072 | dice_loss: 0.8243 | total_loss: 0.4158: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:44/100|val_bce_loss: 0.0252|val_dice_loss: 0.5034| val_total_loss: 0.2643|val_f1: 0.3581|val_asd: 7.8387|val_hd95: 33.1162
+Best train loss: 0.1510 is saved!
+Train_Epoch:45/100|iter:63| bce_loss: 0.0056 | dice_loss: 0.2640 | total_loss: 0.1348: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:45/100|train_bce_loss: 0.0100|train_dice_loss: 0.3035|train_total_loss: 0.1567|train_f1: 0.8664|train_asd: 0.7631|train_hd95: 2.0000
+Val_Epoch:45/100|iter:16| bce_loss: 0.0072 | dice_loss: 0.7404 | total_loss: 0.3738: 100%|██████████| 16/16 [00:09<00:00,  1.66it/s]
+Val_Epoch:45/100|val_bce_loss: 0.0253|val_dice_loss: 0.4580| val_total_loss: 0.2417|val_f1: 0.3707|val_asd: 4.4073|val_hd95: 8.0623
+Best val loss: 0.2417 is saved!
+Train_Epoch:46/100|iter:63| bce_loss: 0.0064 | dice_loss: 0.3697 | total_loss: 0.1881: 100%|██████████| 63/63 [01:14<00:00,  1.18s/it]
+Train_Epoch:46/100|train_bce_loss: 0.0102|train_dice_loss: 0.2991|train_total_loss: 0.1547|train_f1: 0.8451|train_asd: 0.1278|train_hd95: 1.4142
+Val_Epoch:46/100|iter:16| bce_loss: 0.0068 | dice_loss: 0.7568 | total_loss: 0.3818: 100%|██████████| 16/16 [00:09<00:00,  1.62it/s]
+Val_Epoch:46/100|val_bce_loss: 0.0295|val_dice_loss: 0.5775| val_total_loss: 0.3035|val_f1: 0.3742|val_asd: 0.0333|val_hd95: 8.3066
+Train_Epoch:47/100|iter:63| bce_loss: 0.0086 | dice_loss: 0.3511 | total_loss: 0.1798: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:47/100|train_bce_loss: 0.0100|train_dice_loss: 0.2913|train_total_loss: 0.1507|train_f1: 0.8223|train_asd: 0.3621|train_hd95: 2.2361
+Val_Epoch:47/100|iter:16| bce_loss: 0.0077 | dice_loss: 0.7271 | total_loss: 0.3674: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:47/100|val_bce_loss: 0.0229|val_dice_loss: 0.4808| val_total_loss: 0.2519|val_f1: 0.3960|val_asd: 17.2093|val_hd95: 39.2046
+Best train loss: 0.1507 is saved!
+Train_Epoch:48/100|iter:63| bce_loss: 0.0138 | dice_loss: 0.4014 | total_loss: 0.2076: 100%|██████████| 63/63 [01:16<00:00,  1.21s/it]
+Train_Epoch:48/100|train_bce_loss: 0.0096|train_dice_loss: 0.2803|train_total_loss: 0.1449|train_f1: 0.7514|train_asd: 0.3686|train_hd95: 3.0000
+Val_Epoch:48/100|iter:16| bce_loss: 0.0078 | dice_loss: 0.8221 | total_loss: 0.4150: 100%|██████████| 16/16 [00:10<00:00,  1.58it/s]
+Val_Epoch:48/100|val_bce_loss: 0.0252|val_dice_loss: 0.5031| val_total_loss: 0.2641|val_f1: 0.3110|val_asd: 2.5175|val_hd95: 8.2764
+Best train loss: 0.1449 is saved!
+Train_Epoch:49/100|iter:63| bce_loss: 0.0057 | dice_loss: 0.2746 | total_loss: 0.1401: 100%|██████████| 63/63 [01:16<00:00,  1.21s/it]
+Train_Epoch:49/100|train_bce_loss: 0.0090|train_dice_loss: 0.2641|train_total_loss: 0.1365|train_f1: 0.8124|train_asd: 0.3695|train_hd95: 1.4142
+Val_Epoch:49/100|iter:16| bce_loss: 0.0074 | dice_loss: 0.8235 | total_loss: 0.4154: 100%|██████████| 16/16 [00:10<00:00,  1.60it/s]
+Val_Epoch:49/100|val_bce_loss: 0.0239|val_dice_loss: 0.4725| val_total_loss: 0.2482|val_f1: 0.3404|val_asd: 2.0298|val_hd95: 8.3066
+Best train loss: 0.1365 is saved!
+Train_Epoch:50/100|iter:63| bce_loss: 0.0134 | dice_loss: 0.2426 | total_loss: 0.1280: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:50/100|train_bce_loss: 0.0090|train_dice_loss: 0.2577|train_total_loss: 0.1333|train_f1: 0.8269|train_asd: 0.1579|train_hd95: 2.0000
+Val_Epoch:50/100|iter:16| bce_loss: 0.0076 | dice_loss: 0.8159 | total_loss: 0.4118: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:50/100|val_bce_loss: 0.0274|val_dice_loss: 0.5302| val_total_loss: 0.2788|val_f1: 0.3447|val_asd: 0.7236|val_hd95: 7.8740
+Best train loss: 0.1333 is saved!
+Train_Epoch:51/100|iter:63| bce_loss: 0.0112 | dice_loss: 0.2277 | total_loss: 0.1195: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:51/100|train_bce_loss: 0.0090|train_dice_loss: 0.2576|train_total_loss: 0.1333|train_f1: 0.8413|train_asd: 0.3054|train_hd95: 1.4142
+Val_Epoch:51/100|iter:16| bce_loss: 0.0078 | dice_loss: 0.7880 | total_loss: 0.3979: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:51/100|val_bce_loss: 0.0239|val_dice_loss: 0.4478| val_total_loss: 0.2358|val_f1: 0.3329|val_asd: 17.0366|val_hd95: 44.5331
+Best val loss: 0.2358 is saved!
+Best train loss: 0.1333 is saved!
+Train_Epoch:52/100|iter:63| bce_loss: 0.0061 | dice_loss: 0.2692 | total_loss: 0.1376: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:52/100|train_bce_loss: 0.0087|train_dice_loss: 0.2506|train_total_loss: 0.1296|train_f1: 0.8547|train_asd: 0.2497|train_hd95: 1.4142
+Val_Epoch:52/100|iter:16| bce_loss: 0.0074 | dice_loss: 0.8107 | total_loss: 0.4091: 100%|██████████| 16/16 [00:09<00:00,  1.64it/s]
+Val_Epoch:52/100|val_bce_loss: 0.0268|val_dice_loss: 0.5053| val_total_loss: 0.2660|val_f1: 0.3634|val_asd: 5.4561|val_hd95: 8.9274
+Best train loss: 0.1296 is saved!
+Train_Epoch:53/100|iter:63| bce_loss: 0.0137 | dice_loss: 0.2523 | total_loss: 0.1330: 100%|██████████| 63/63 [01:16<00:00,  1.22s/it]
+Train_Epoch:53/100|train_bce_loss: 0.0089|train_dice_loss: 0.2542|train_total_loss: 0.1316|train_f1: 0.8031|train_asd: 0.3957|train_hd95: 2.0000
+Val_Epoch:53/100|iter:16| bce_loss: 0.0083 | dice_loss: 0.7996 | total_loss: 0.4039: 100%|██████████| 16/16 [00:10<00:00,  1.58it/s]
+Val_Epoch:53/100|val_bce_loss: 0.0262|val_dice_loss: 0.4487| val_total_loss: 0.2375|val_f1: 0.3412|val_asd: 6.7190|val_hd95: 9.1104
+Train_Epoch:54/100|iter:63| bce_loss: 0.0102 | dice_loss: 0.2144 | total_loss: 0.1123: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:54/100|train_bce_loss: 0.0096|train_dice_loss: 0.2604|train_total_loss: 0.1350|train_f1: 0.8541|train_asd: 0.1628|train_hd95: 1.4142
+Val_Epoch:54/100|iter:16| bce_loss: 0.0079 | dice_loss: 0.8211 | total_loss: 0.4145: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:54/100|val_bce_loss: 0.0289|val_dice_loss: 0.5184| val_total_loss: 0.2736|val_f1: 0.3344|val_asd: 0.1818|val_hd95: 10.6888
+Train_Epoch:55/100|iter:63| bce_loss: 0.0048 | dice_loss: 0.3484 | total_loss: 0.1766: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:55/100|train_bce_loss: 0.0092|train_dice_loss: 0.2536|train_total_loss: 0.1314|train_f1: 0.8502|train_asd: 0.2216|train_hd95: 2.0000
+Val_Epoch:55/100|iter:16| bce_loss: 0.0073 | dice_loss: 0.6998 | total_loss: 0.3536: 100%|██████████| 16/16 [00:10<00:00,  1.58it/s]
+Val_Epoch:55/100|val_bce_loss: 0.0268|val_dice_loss: 0.4661| val_total_loss: 0.2464|val_f1: 0.4296|val_asd: 5.2152|val_hd95: 6.0497
+Train_Epoch:56/100|iter:63| bce_loss: 0.0098 | dice_loss: 0.2940 | total_loss: 0.1519: 100%|██████████| 63/63 [01:14<00:00,  1.19s/it]
+Train_Epoch:56/100|train_bce_loss: 0.0091|train_dice_loss: 0.2509|train_total_loss: 0.1300|train_f1: 0.8048|train_asd: 0.2739|train_hd95: 2.0000
+Val_Epoch:56/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.8352 | total_loss: 0.4217: 100%|██████████| 16/16 [00:09<00:00,  1.66it/s]
+Val_Epoch:56/100|val_bce_loss: 0.0266|val_dice_loss: 0.5017| val_total_loss: 0.2641|val_f1: 0.3317|val_asd: 0.0772|val_hd95: 8.3066
+Train_Epoch:57/100|iter:63| bce_loss: 0.0134 | dice_loss: 0.2115 | total_loss: 0.1124: 100%|██████████| 63/63 [01:14<00:00,  1.19s/it]
+Train_Epoch:57/100|train_bce_loss: 0.0090|train_dice_loss: 0.2455|train_total_loss: 0.1273|train_f1: 0.8129|train_asd: 0.1965|train_hd95: 2.0000
+Val_Epoch:57/100|iter:16| bce_loss: 0.0080 | dice_loss: 0.7253 | total_loss: 0.3667: 100%|██████████| 16/16 [00:10<00:00,  1.53it/s]
+Val_Epoch:57/100|val_bce_loss: 0.0257|val_dice_loss: 0.4532| val_total_loss: 0.2395|val_f1: 0.3815|val_asd: 10.5409|val_hd95: 39.2681
+Epoch 00057: reducing learning rate of group 0 to 1.0000e-05.
+Best train loss: 0.1273 is saved!
+Train_Epoch:58/100|iter:63| bce_loss: 0.0090 | dice_loss: 0.2219 | total_loss: 0.1154: 100%|██████████| 63/63 [01:14<00:00,  1.18s/it]
+Train_Epoch:58/100|train_bce_loss: 0.0089|train_dice_loss: 0.2456|train_total_loss: 0.1273|train_f1: 0.8645|train_asd: 0.1760|train_hd95: 1.4142
+Val_Epoch:58/100|iter:16| bce_loss: 0.0085 | dice_loss: 0.7996 | total_loss: 0.4040: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:58/100|val_bce_loss: 0.0268|val_dice_loss: 0.4884| val_total_loss: 0.2576|val_f1: 0.3266|val_asd: 8.4694|val_hd95: 37.9697
+Train_Epoch:59/100|iter:63| bce_loss: 0.0076 | dice_loss: 0.1722 | total_loss: 0.0899: 100%|██████████| 63/63 [01:14<00:00,  1.18s/it]
+Train_Epoch:59/100|train_bce_loss: 0.0085|train_dice_loss: 0.2326|train_total_loss: 0.1205|train_f1: 0.9085|train_asd: 0.0961|train_hd95: 1.0000
+Val_Epoch:59/100|iter:16| bce_loss: 0.0078 | dice_loss: 0.7648 | total_loss: 0.3863: 100%|██████████| 16/16 [00:10<00:00,  1.59it/s]
+Val_Epoch:59/100|val_bce_loss: 0.0263|val_dice_loss: 0.4731| val_total_loss: 0.2497|val_f1: 0.3965|val_asd: 8.5065|val_hd95: 38.2753
+Best train loss: 0.1205 is saved!
+Train_Epoch:60/100|iter:63| bce_loss: 0.0074 | dice_loss: 0.1683 | total_loss: 0.0879: 100%|██████████| 63/63 [01:14<00:00,  1.19s/it]
+Train_Epoch:60/100|train_bce_loss: 0.0083|train_dice_loss: 0.2284|train_total_loss: 0.1184|train_f1: 0.9188|train_asd: 0.1026|train_hd95: 1.0000
+Val_Epoch:60/100|iter:16| bce_loss: 0.0078 | dice_loss: 0.7717 | total_loss: 0.3898: 100%|██████████| 16/16 [00:09<00:00,  1.64it/s]
+Val_Epoch:60/100|val_bce_loss: 0.0265|val_dice_loss: 0.4884| val_total_loss: 0.2574|val_f1: 0.3769|val_asd: 6.3195|val_hd95: 9.1669
+Best train loss: 0.1184 is saved!
+Train_Epoch:61/100|iter:63| bce_loss: 0.0085 | dice_loss: 0.2113 | total_loss: 0.1099: 100%|██████████| 63/63 [01:18<00:00,  1.25s/it]
+Train_Epoch:61/100|train_bce_loss: 0.0082|train_dice_loss: 0.2266|train_total_loss: 0.1174|train_f1: 0.8802|train_asd: 0.1591|train_hd95: 1.0000
+Val_Epoch:61/100|iter:16| bce_loss: 0.0079 | dice_loss: 0.7751 | total_loss: 0.3915: 100%|██████████| 16/16 [00:10<00:00,  1.54it/s]
+Val_Epoch:61/100|val_bce_loss: 0.0261|val_dice_loss: 0.4839| val_total_loss: 0.2550|val_f1: 0.3650|val_asd: 7.5207|val_hd95: 36.9959
+Best train loss: 0.1174 is saved!
+Train_Epoch:62/100|iter:63| bce_loss: 0.0106 | dice_loss: 0.2995 | total_loss: 0.1550: 100%|██████████| 63/63 [01:15<00:00,  1.19s/it]
+Train_Epoch:62/100|train_bce_loss: 0.0082|train_dice_loss: 0.2252|train_total_loss: 0.1167|train_f1: 0.8099|train_asd: 0.4184|train_hd95: 1.4142
+Val_Epoch:62/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7858 | total_loss: 0.3970: 100%|██████████| 16/16 [00:09<00:00,  1.63it/s]
+Val_Epoch:62/100|val_bce_loss: 0.0260|val_dice_loss: 0.4773| val_total_loss: 0.2516|val_f1: 0.3446|val_asd: 8.4577|val_hd95: 37.3086
+Best train loss: 0.1167 is saved!
+Train_Epoch:63/100|iter:63| bce_loss: 0.0105 | dice_loss: 0.1823 | total_loss: 0.0964: 100%|██████████| 63/63 [01:14<00:00,  1.19s/it]
+Train_Epoch:63/100|train_bce_loss: 0.0081|train_dice_loss: 0.2217|train_total_loss: 0.1149|train_f1: 0.8554|train_asd: 0.2438|train_hd95: 1.4142
+Val_Epoch:63/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7819 | total_loss: 0.3950: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:63/100|val_bce_loss: 0.0259|val_dice_loss: 0.4754| val_total_loss: 0.2507|val_f1: 0.3477|val_asd: 6.1346|val_hd95: 9.0554
+Epoch 00063: reducing learning rate of group 0 to 1.0000e-06.
+Best train loss: 0.1149 is saved!
+Train_Epoch:64/100|iter:63| bce_loss: 0.0096 | dice_loss: 0.1430 | total_loss: 0.0763: 100%|██████████| 63/63 [01:14<00:00,  1.18s/it]
+Train_Epoch:64/100|train_bce_loss: 0.0082|train_dice_loss: 0.2218|train_total_loss: 0.1150|train_f1: 0.8932|train_asd: 0.1210|train_hd95: 1.0000
+Val_Epoch:64/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7904 | total_loss: 0.3993: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:64/100|val_bce_loss: 0.0260|val_dice_loss: 0.4776| val_total_loss: 0.2518|val_f1: 0.3359|val_asd: 8.0278|val_hd95: 37.2880
+Train_Epoch:65/100|iter:63| bce_loss: 0.0043 | dice_loss: 0.2960 | total_loss: 0.1501: 100%|██████████| 63/63 [01:17<00:00,  1.22s/it]
+Train_Epoch:65/100|train_bce_loss: 0.0081|train_dice_loss: 0.2216|train_total_loss: 0.1149|train_f1: 0.8080|train_asd: 1.6623|train_hd95: 7.3143
+Val_Epoch:65/100|iter:16| bce_loss: 0.0080 | dice_loss: 0.7763 | total_loss: 0.3922: 100%|██████████| 16/16 [00:11<00:00,  1.41it/s]
+Val_Epoch:65/100|val_bce_loss: 0.0262|val_dice_loss: 0.4754| val_total_loss: 0.2508|val_f1: 0.3562|val_asd: 6.4554|val_hd95: 9.1857
+Best train loss: 0.1149 is saved!
+Train_Epoch:66/100|iter:63| bce_loss: 0.0080 | dice_loss: 0.2632 | total_loss: 0.1356: 100%|██████████| 63/63 [01:14<00:00,  1.18s/it]
+Train_Epoch:66/100|train_bce_loss: 0.0081|train_dice_loss: 0.2212|train_total_loss: 0.1146|train_f1: 0.8414|train_asd: 0.2332|train_hd95: 1.0000
+Val_Epoch:66/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7870 | total_loss: 0.3976: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:66/100|val_bce_loss: 0.0262|val_dice_loss: 0.4805| val_total_loss: 0.2534|val_f1: 0.3410|val_asd: 7.9214|val_hd95: 37.2759
+Best train loss: 0.1146 is saved!
+Train_Epoch:67/100|iter:63| bce_loss: 0.0076 | dice_loss: 0.1609 | total_loss: 0.0843: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:67/100|train_bce_loss: 0.0080|train_dice_loss: 0.2196|train_total_loss: 0.1138|train_f1: 0.8833|train_asd: 0.1469|train_hd95: 1.0000
+Val_Epoch:67/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7902 | total_loss: 0.3992: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:67/100|val_bce_loss: 0.0262|val_dice_loss: 0.4883| val_total_loss: 0.2572|val_f1: 0.3349|val_asd: 6.2607|val_hd95: 9.0554
+Best train loss: 0.1138 is saved!
+Train_Epoch:68/100|iter:63| bce_loss: 0.0074 | dice_loss: 0.1836 | total_loss: 0.0955: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:68/100|train_bce_loss: 0.0080|train_dice_loss: 0.2195|train_total_loss: 0.1138|train_f1: 0.9103|train_asd: 0.1317|train_hd95: 1.0000
+Val_Epoch:68/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7830 | total_loss: 0.3955: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:68/100|val_bce_loss: 0.0261|val_dice_loss: 0.4750| val_total_loss: 0.2505|val_f1: 0.3486|val_asd: 7.5058|val_hd95: 37.0842
+Best train loss: 0.1138 is saved!
+Train_Epoch:69/100|iter:63| bce_loss: 0.0067 | dice_loss: 0.1971 | total_loss: 0.1019: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:69/100|train_bce_loss: 0.0081|train_dice_loss: 0.2200|train_total_loss: 0.1141|train_f1: 0.8995|train_asd: 0.1556|train_hd95: 1.0000
+Val_Epoch:69/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7844 | total_loss: 0.3963: 100%|██████████| 16/16 [00:09<00:00,  1.60it/s]
+Val_Epoch:69/100|val_bce_loss: 0.0262|val_dice_loss: 0.4756| val_total_loss: 0.2509|val_f1: 0.3522|val_asd: 7.0046|val_hd95: 20.6366
+Epoch 00069: reducing learning rate of group 0 to 1.0000e-07.
+Train_Epoch:70/100|iter:63| bce_loss: 0.0066 | dice_loss: 0.1592 | total_loss: 0.0829: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:70/100|train_bce_loss: 0.0080|train_dice_loss: 0.2189|train_total_loss: 0.1135|train_f1: 0.9049|train_asd: 0.1572|train_hd95: 1.0000
+Val_Epoch:70/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7839 | total_loss: 0.3960: 100%|██████████| 16/16 [00:09<00:00,  1.68it/s]
+Val_Epoch:70/100|val_bce_loss: 0.0262|val_dice_loss: 0.4815| val_total_loss: 0.2539|val_f1: 0.3493|val_asd: 6.1881|val_hd95: 9.0554
+Best train loss: 0.1135 is saved!
+Train_Epoch:71/100|iter:63| bce_loss: 0.0122 | dice_loss: 0.2049 | total_loss: 0.1085: 100%|██████████| 63/63 [01:12<00:00,  1.15s/it]
+Train_Epoch:71/100|train_bce_loss: 0.0080|train_dice_loss: 0.2187|train_total_loss: 0.1134|train_f1: 0.8573|train_asd: 0.2034|train_hd95: 1.0000
+Val_Epoch:71/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7861 | total_loss: 0.3971: 100%|██████████| 16/16 [00:09<00:00,  1.64it/s]
+Val_Epoch:71/100|val_bce_loss: 0.0261|val_dice_loss: 0.4808| val_total_loss: 0.2534|val_f1: 0.3482|val_asd: 6.6320|val_hd95: 9.3363
+Best train loss: 0.1134 is saved!
+Train_Epoch:72/100|iter:63| bce_loss: 0.0076 | dice_loss: 0.1400 | total_loss: 0.0738: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:72/100|train_bce_loss: 0.0080|train_dice_loss: 0.2178|train_total_loss: 0.1129|train_f1: 0.9194|train_asd: 0.1090|train_hd95: 1.0000
+Val_Epoch:72/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7877 | total_loss: 0.3979: 100%|██████████| 16/16 [00:10<00:00,  1.53it/s]
+Val_Epoch:72/100|val_bce_loss: 0.0261|val_dice_loss: 0.4803| val_total_loss: 0.2532|val_f1: 0.3457|val_asd: 6.6768|val_hd95: 9.3551
+Best train loss: 0.1129 is saved!
+Train_Epoch:73/100|iter:63| bce_loss: 0.0060 | dice_loss: 0.2313 | total_loss: 0.1186: 100%|██████████| 63/63 [01:12<00:00,  1.15s/it]
+Train_Epoch:73/100|train_bce_loss: 0.0080|train_dice_loss: 0.2179|train_total_loss: 0.1130|train_f1: 0.8665|train_asd: 0.2131|train_hd95: 1.4142
+Val_Epoch:73/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7829 | total_loss: 0.3955: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:73/100|val_bce_loss: 0.0262|val_dice_loss: 0.4750| val_total_loss: 0.2506|val_f1: 0.3502|val_asd: 6.8107|val_hd95: 9.6932
+Train_Epoch:74/100|iter:63| bce_loss: 0.0054 | dice_loss: 0.1977 | total_loss: 0.1015: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:74/100|train_bce_loss: 0.0080|train_dice_loss: 0.2191|train_total_loss: 0.1136|train_f1: 0.8790|train_asd: 0.2090|train_hd95: 1.0000
+Val_Epoch:74/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7847 | total_loss: 0.3964: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:74/100|val_bce_loss: 0.0262|val_dice_loss: 0.4799| val_total_loss: 0.2530|val_f1: 0.3508|val_asd: 6.6080|val_hd95: 9.3175
+Train_Epoch:75/100|iter:63| bce_loss: 0.0115 | dice_loss: 0.2313 | total_loss: 0.1214: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:75/100|train_bce_loss: 0.0081|train_dice_loss: 0.2193|train_total_loss: 0.1137|train_f1: 0.8838|train_asd: 0.1977|train_hd95: 1.0000
+Val_Epoch:75/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7841 | total_loss: 0.3961: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:75/100|val_bce_loss: 0.0261|val_dice_loss: 0.4745| val_total_loss: 0.2503|val_f1: 0.3481|val_asd: 7.7235|val_hd95: 37.2518
+Epoch 00075: reducing learning rate of group 0 to 1.0000e-08.
+Train_Epoch:76/100|iter:63| bce_loss: 0.0046 | dice_loss: 0.2146 | total_loss: 0.1096: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:76/100|train_bce_loss: 0.0080|train_dice_loss: 0.2181|train_total_loss: 0.1131|train_f1: 0.8764|train_asd: 0.1910|train_hd95: 1.0000
+Val_Epoch:76/100|iter:16| bce_loss: 0.0080 | dice_loss: 0.7787 | total_loss: 0.3934: 100%|██████████| 16/16 [00:09<00:00,  1.64it/s]
+Val_Epoch:76/100|val_bce_loss: 0.0260|val_dice_loss: 0.4740| val_total_loss: 0.2500|val_f1: 0.3522|val_asd: 5.9796|val_hd95: 9.0554
+Train_Epoch:77/100|iter:63| bce_loss: 0.0077 | dice_loss: 0.2534 | total_loss: 0.1306: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:77/100|train_bce_loss: 0.0080|train_dice_loss: 0.2186|train_total_loss: 0.1133|train_f1: 0.8604|train_asd: 0.2089|train_hd95: 1.0000
+Val_Epoch:77/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7861 | total_loss: 0.3971: 100%|██████████| 16/16 [00:09<00:00,  1.64it/s]
+Val_Epoch:77/100|val_bce_loss: 0.0263|val_dice_loss: 0.4819| val_total_loss: 0.2541|val_f1: 0.3488|val_asd: 6.4182|val_hd95: 9.0912
+Train_Epoch:78/100|iter:63| bce_loss: 0.0089 | dice_loss: 0.1773 | total_loss: 0.0931: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:78/100|train_bce_loss: 0.0080|train_dice_loss: 0.2185|train_total_loss: 0.1132|train_f1: 0.9013|train_asd: 0.1059|train_hd95: 1.0000
+Val_Epoch:78/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7825 | total_loss: 0.3953: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:78/100|val_bce_loss: 0.0261|val_dice_loss: 0.4797| val_total_loss: 0.2529|val_f1: 0.3497|val_asd: 6.7806|val_hd95: 9.6725
+Train_Epoch:79/100|iter:63| bce_loss: 0.0095 | dice_loss: 0.2181 | total_loss: 0.1138: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:79/100|train_bce_loss: 0.0080|train_dice_loss: 0.2183|train_total_loss: 0.1132|train_f1: 0.8833|train_asd: 0.1873|train_hd95: 1.0000
+Val_Epoch:79/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7818 | total_loss: 0.3949: 100%|██████████| 16/16 [00:10<00:00,  1.54it/s]
+Val_Epoch:79/100|val_bce_loss: 0.0261|val_dice_loss: 0.4760| val_total_loss: 0.2511|val_f1: 0.3513|val_asd: 6.1200|val_hd95: 9.0554
+Train_Epoch:80/100|iter:63| bce_loss: 0.0102 | dice_loss: 0.1883 | total_loss: 0.0992: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:80/100|train_bce_loss: 0.0080|train_dice_loss: 0.2189|train_total_loss: 0.1135|train_f1: 0.8692|train_asd: 0.1951|train_hd95: 1.0000
+Val_Epoch:80/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7882 | total_loss: 0.3982: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:80/100|val_bce_loss: 0.0261|val_dice_loss: 0.4788| val_total_loss: 0.2525|val_f1: 0.3354|val_asd: 7.9809|val_hd95: 37.2820
+Train_Epoch:81/100|iter:63| bce_loss: 0.0085 | dice_loss: 0.2991 | total_loss: 0.1538: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:81/100|train_bce_loss: 0.0080|train_dice_loss: 0.2188|train_total_loss: 0.1134|train_f1: 0.8655|train_asd: 0.2465|train_hd95: 1.4142
+Val_Epoch:81/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7891 | total_loss: 0.3987: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:81/100|val_bce_loss: 0.0262|val_dice_loss: 0.4819| val_total_loss: 0.2541|val_f1: 0.3349|val_asd: 7.1344|val_hd95: 9.8170
+Train_Epoch:82/100|iter:63| bce_loss: 0.0043 | dice_loss: 0.1993 | total_loss: 0.1018: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:82/100|train_bce_loss: 0.0080|train_dice_loss: 0.2199|train_total_loss: 0.1140|train_f1: 0.8808|train_asd: 0.1756|train_hd95: 1.0000
+Val_Epoch:82/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7822 | total_loss: 0.3951: 100%|██████████| 16/16 [00:09<00:00,  1.62it/s]
+Val_Epoch:82/100|val_bce_loss: 0.0262|val_dice_loss: 0.4764| val_total_loss: 0.2513|val_f1: 0.3511|val_asd: 7.4574|val_hd95: 36.8903
+Train_Epoch:83/100|iter:63| bce_loss: 0.0120 | dice_loss: 0.2844 | total_loss: 0.1482: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:83/100|train_bce_loss: 0.0080|train_dice_loss: 0.2187|train_total_loss: 0.1133|train_f1: 0.8384|train_asd: 0.3258|train_hd95: 2.0000
+Val_Epoch:83/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7824 | total_loss: 0.3952: 100%|██████████| 16/16 [00:09<00:00,  1.65it/s]
+Val_Epoch:83/100|val_bce_loss: 0.0261|val_dice_loss: 0.4801| val_total_loss: 0.2531|val_f1: 0.3513|val_asd: 6.1200|val_hd95: 9.0554
+Train_Epoch:84/100|iter:63| bce_loss: 0.0043 | dice_loss: 0.1656 | total_loss: 0.0849: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:84/100|train_bce_loss: 0.0081|train_dice_loss: 0.2183|train_total_loss: 0.1132|train_f1: 0.8864|train_asd: 0.1862|train_hd95: 1.0000
+Val_Epoch:84/100|iter:16| bce_loss: 0.0080 | dice_loss: 0.7808 | total_loss: 0.3944: 100%|██████████| 16/16 [00:10<00:00,  1.58it/s]
+Val_Epoch:84/100|val_bce_loss: 0.0260|val_dice_loss: 0.4796| val_total_loss: 0.2528|val_f1: 0.3508|val_asd: 5.8365|val_hd95: 9.0305
+Train_Epoch:85/100|iter:63| bce_loss: 0.0092 | dice_loss: 0.2072 | total_loss: 0.1082: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:85/100|train_bce_loss: 0.0080|train_dice_loss: 0.2181|train_total_loss: 0.1130|train_f1: 0.8534|train_asd: 0.1752|train_hd95: 1.4142
+Val_Epoch:85/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7870 | total_loss: 0.3976: 100%|██████████| 16/16 [00:10<00:00,  1.57it/s]
+Val_Epoch:85/100|val_bce_loss: 0.0261|val_dice_loss: 0.4775| val_total_loss: 0.2518|val_f1: 0.3405|val_asd: 7.8759|val_hd95: 37.2699
+Train_Epoch:86/100|iter:63| bce_loss: 0.0043 | dice_loss: 0.2642 | total_loss: 0.1342: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:86/100|train_bce_loss: 0.0080|train_dice_loss: 0.2191|train_total_loss: 0.1136|train_f1: 0.8825|train_asd: 0.1990|train_hd95: 1.0000
+Val_Epoch:86/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7832 | total_loss: 0.3957: 100%|██████████| 16/16 [00:10<00:00,  1.54it/s]
+Val_Epoch:86/100|val_bce_loss: 0.0261|val_dice_loss: 0.4821| val_total_loss: 0.2541|val_f1: 0.3493|val_asd: 5.9420|val_hd95: 9.0388
+Train_Epoch:87/100|iter:63| bce_loss: 0.0098 | dice_loss: 0.2135 | total_loss: 0.1116: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:87/100|train_bce_loss: 0.0080|train_dice_loss: 0.2179|train_total_loss: 0.1130|train_f1: 0.8284|train_asd: 0.2523|train_hd95: 2.0000
+Val_Epoch:87/100|iter:16| bce_loss: 0.0083 | dice_loss: 0.7913 | total_loss: 0.3998: 100%|██████████| 16/16 [00:10<00:00,  1.54it/s]
+Val_Epoch:87/100|val_bce_loss: 0.0262|val_dice_loss: 0.4826| val_total_loss: 0.2544|val_f1: 0.3328|val_asd: 7.4804|val_hd95: 34.1437
+Train_Epoch:88/100|iter:63| bce_loss: 0.0071 | dice_loss: 0.1890 | total_loss: 0.0981: 100%|██████████| 63/63 [01:15<00:00,  1.20s/it]
+Train_Epoch:88/100|train_bce_loss: 0.0080|train_dice_loss: 0.2179|train_total_loss: 0.1129|train_f1: 0.8651|train_asd: 0.2258|train_hd95: 1.0000
+Val_Epoch:88/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7821 | total_loss: 0.3951: 100%|██████████| 16/16 [00:09<00:00,  1.66it/s]
+Val_Epoch:88/100|val_bce_loss: 0.0260|val_dice_loss: 0.4748| val_total_loss: 0.2504|val_f1: 0.3495|val_asd: 7.5973|val_hd95: 37.0438
+Best train loss: 0.1129 is saved!
+Train_Epoch:89/100|iter:63| bce_loss: 0.0125 | dice_loss: 0.2048 | total_loss: 0.1086: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:89/100|train_bce_loss: 0.0080|train_dice_loss: 0.2179|train_total_loss: 0.1129|train_f1: 0.8558|train_asd: 0.1645|train_hd95: 1.4142
+Val_Epoch:89/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7865 | total_loss: 0.3974: 100%|██████████| 16/16 [00:09<00:00,  1.63it/s]
+Val_Epoch:89/100|val_bce_loss: 0.0261|val_dice_loss: 0.4784| val_total_loss: 0.2523|val_f1: 0.3451|val_asd: 6.9021|val_hd95: 9.7344
+Train_Epoch:90/100|iter:63| bce_loss: 0.0048 | dice_loss: 0.1891 | total_loss: 0.0970: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:90/100|train_bce_loss: 0.0081|train_dice_loss: 0.2194|train_total_loss: 0.1137|train_f1: 0.9257|train_asd: 0.1252|train_hd95: 1.0000
+Val_Epoch:90/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7869 | total_loss: 0.3975: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:90/100|val_bce_loss: 0.0261|val_dice_loss: 0.4752| val_total_loss: 0.2506|val_f1: 0.3430|val_asd: 7.8244|val_hd95: 37.2639
+Train_Epoch:91/100|iter:63| bce_loss: 0.0050 | dice_loss: 0.3240 | total_loss: 0.1645: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:91/100|train_bce_loss: 0.0080|train_dice_loss: 0.2188|train_total_loss: 0.1134|train_f1: 0.8659|train_asd: 0.9131|train_hd95: 2.8284
+Val_Epoch:91/100|iter:16| bce_loss: 0.0080 | dice_loss: 0.7785 | total_loss: 0.3933: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:91/100|val_bce_loss: 0.0260|val_dice_loss: 0.4743| val_total_loss: 0.2501|val_f1: 0.3547|val_asd: 5.9408|val_hd95: 9.0554
+Train_Epoch:92/100|iter:63| bce_loss: 0.0081 | dice_loss: 0.1759 | total_loss: 0.0920: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:92/100|train_bce_loss: 0.0080|train_dice_loss: 0.2187|train_total_loss: 0.1134|train_f1: 0.9041|train_asd: 0.1495|train_hd95: 1.0000
+Val_Epoch:92/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7821 | total_loss: 0.3951: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:92/100|val_bce_loss: 0.0260|val_dice_loss: 0.4766| val_total_loss: 0.2513|val_f1: 0.3481|val_asd: 7.4718|val_hd95: 37.0741
+Train_Epoch:93/100|iter:63| bce_loss: 0.0062 | dice_loss: 0.2479 | total_loss: 0.1271: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:93/100|train_bce_loss: 0.0081|train_dice_loss: 0.2186|train_total_loss: 0.1133|train_f1: 0.9084|train_asd: 0.1360|train_hd95: 1.0000
+Val_Epoch:93/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7828 | total_loss: 0.3955: 100%|██████████| 16/16 [00:10<00:00,  1.58it/s]
+Val_Epoch:93/100|val_bce_loss: 0.0259|val_dice_loss: 0.4789| val_total_loss: 0.2524|val_f1: 0.3457|val_asd: 6.4128|val_hd95: 9.0912
+Train_Epoch:94/100|iter:63| bce_loss: 0.0065 | dice_loss: 0.2303 | total_loss: 0.1184: 100%|██████████| 63/63 [01:13<00:00,  1.17s/it]
+Train_Epoch:94/100|train_bce_loss: 0.0080|train_dice_loss: 0.2185|train_total_loss: 0.1132|train_f1: 0.8731|train_asd: 0.1527|train_hd95: 1.0000
+Val_Epoch:94/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7867 | total_loss: 0.3974: 100%|██████████| 16/16 [00:09<00:00,  1.66it/s]
+Val_Epoch:94/100|val_bce_loss: 0.0262|val_dice_loss: 0.4823| val_total_loss: 0.2542|val_f1: 0.3451|val_asd: 6.9021|val_hd95: 9.7344
+Train_Epoch:95/100|iter:63| bce_loss: 0.0062 | dice_loss: 0.2484 | total_loss: 0.1273: 100%|██████████| 63/63 [01:16<00:00,  1.22s/it]
+Train_Epoch:95/100|train_bce_loss: 0.0081|train_dice_loss: 0.2185|train_total_loss: 0.1133|train_f1: 0.8692|train_asd: 0.8720|train_hd95: 1.4142
+Val_Epoch:95/100|iter:16| bce_loss: 0.0079 | dice_loss: 0.7741 | total_loss: 0.3910: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:95/100|val_bce_loss: 0.0261|val_dice_loss: 0.4757| val_total_loss: 0.2509|val_f1: 0.3647|val_asd: 5.7904|val_hd95: 9.0554
+Train_Epoch:96/100|iter:63| bce_loss: 0.0085 | dice_loss: 0.3334 | total_loss: 0.1710: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:96/100|train_bce_loss: 0.0080|train_dice_loss: 0.2190|train_total_loss: 0.1135|train_f1: 0.8463|train_asd: 0.2131|train_hd95: 1.0000
+Val_Epoch:96/100|iter:16| bce_loss: 0.0080 | dice_loss: 0.7809 | total_loss: 0.3944: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:96/100|val_bce_loss: 0.0260|val_dice_loss: 0.4743| val_total_loss: 0.2502|val_f1: 0.3476|val_asd: 7.4303|val_hd95: 37.0640
+Train_Epoch:97/100|iter:63| bce_loss: 0.0049 | dice_loss: 0.1451 | total_loss: 0.0750: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:97/100|train_bce_loss: 0.0080|train_dice_loss: 0.2178|train_total_loss: 0.1129|train_f1: 0.9188|train_asd: 0.1087|train_hd95: 1.0000
+Val_Epoch:97/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7853 | total_loss: 0.3967: 100%|██████████| 16/16 [00:10<00:00,  1.55it/s]
+Val_Epoch:97/100|val_bce_loss: 0.0261|val_dice_loss: 0.4830| val_total_loss: 0.2545|val_f1: 0.3488|val_asd: 6.1614|val_hd95: 9.0554
+Best train loss: 0.1129 is saved!
+Train_Epoch:98/100|iter:63| bce_loss: 0.0074 | dice_loss: 0.2190 | total_loss: 0.1132: 100%|██████████| 63/63 [01:13<00:00,  1.16s/it]
+Train_Epoch:98/100|train_bce_loss: 0.0080|train_dice_loss: 0.2190|train_total_loss: 0.1135|train_f1: 0.8949|train_asd: 0.1397|train_hd95: 1.0000
+Val_Epoch:98/100|iter:16| bce_loss: 0.0081 | dice_loss: 0.7834 | total_loss: 0.3957: 100%|██████████| 16/16 [00:10<00:00,  1.56it/s]
+Val_Epoch:98/100|val_bce_loss: 0.0262|val_dice_loss: 0.4839| val_total_loss: 0.2551|val_f1: 0.3493|val_asd: 5.9420|val_hd95: 9.0388
+Train_Epoch:99/100|iter:63| bce_loss: 0.0097 | dice_loss: 0.2277 | total_loss: 0.1187: 100%|██████████| 63/63 [01:14<00:00,  1.19s/it]
+Train_Epoch:99/100|train_bce_loss: 0.0081|train_dice_loss: 0.2185|train_total_loss: 0.1133|train_f1: 0.8784|train_asd: 0.1845|train_hd95: 1.0000
+Val_Epoch:99/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7860 | total_loss: 0.3971: 100%|██████████| 16/16 [00:09<00:00,  1.65it/s]
+Val_Epoch:99/100|val_bce_loss: 0.0262|val_dice_loss: 0.4824| val_total_loss: 0.2543|val_f1: 0.3467|val_asd: 6.2305|val_hd95: 9.0554
+Train_Epoch:100/100|iter:63| bce_loss: 0.0157 | dice_loss: 0.1502 | total_loss: 0.0830: 100%|██████████| 63/63 [01:14<00:00,  1.19s/it]
+Train_Epoch:100/100|train_bce_loss: 0.0080|train_dice_loss: 0.2178|train_total_loss: 0.1129|train_f1: 0.8704|train_asd: 0.0999|train_hd95: 1.4142
+Val_Epoch:100/100|iter:16| bce_loss: 0.0082 | dice_loss: 0.7891 | total_loss: 0.3987: 100%|██████████| 16/16 [00:10<00:00,  1.54it/s]
+Val_Epoch:100/100|val_bce_loss: 0.0263|val_dice_loss: 0.4825| val_total_loss: 0.2544|val_f1: 0.3385|val_asd: 6.8764|val_hd95: 9.4304
+Last model is saved!
+Loss and metrics are saved!
+100%|██████████| 16/16 [00:04<00:00,  3.23it/s]Predictions are saved!
